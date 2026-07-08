@@ -4,7 +4,7 @@ import ContractAddress from "@/components/ContractAddress";
 
 const Hero = () => {
   return (
-    <div className="relative pt-32 pb-16 bg-[#1a1512] min-h-dvh flex flex-col justify-center items-center px-4 overflow-hidden">
+    <div className="relative pt-32 pb-16 bg-mewdonDark min-h-dvh flex flex-col justify-center items-center px-4 overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#db0007_1px,transparent_1px)] [background-size:16px_16px]"></div>
       

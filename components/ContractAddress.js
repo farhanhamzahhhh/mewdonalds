@@ -5,16 +5,17 @@ import { Copy } from "@/components/icons";
 import { contractAddress } from "@/constants";
 
 const ContractAddress = () => {
-  const [copySuccess, setCopySuccess] = useState(false);
+  const [copyStatus, setCopyStatus] = useState("idle"); // "idle" | "copied" | "failed"
   const [textToCopy] = useState(contractAddress);
 
   const copyText = async () => {
     try {
       await navigator.clipboard.writeText(textToCopy);
-      setCopySuccess(true);
-      setTimeout(() => setCopySuccess(false), 2000);
+      setCopyStatus("copied");
+      setTimeout(() => setCopyStatus("idle"), 2000);
     } catch (error) {
-      setCopySuccess("Failed!");
+      setCopyStatus("failed");
+      setTimeout(() => setCopyStatus("idle"), 2000);
     }
   };
 
@@ -35,7 +36,13 @@ const ContractAddress = () => {
       <div className="flex justify-between items-center mt-3 pt-3 border-t border-dashed border-gray-400">
         <div>
           <span className="text-xs block text-gray-500">TAX: 0% | SLIPPAGE: AUTO</span>
-          <span className="font-bold text-mewdonRed">{copySuccess ? "COPIED TO DOMPET!" : "PENDING RECEIPT..."}</span>
+          <span className="font-bold text-mewdonRed">
+            {copyStatus === "copied"
+              ? "COPIED TO DOMPET!"
+              : copyStatus === "failed"
+              ? "FAILED TO COPY!"
+              : "PENDING RECEIPT..."}
+          </span>
         </div>
         <button
           onClick={copyText}
