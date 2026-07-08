@@ -17,7 +17,7 @@ const Hero = () => {
         {/* Banner image */}
         <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border-4 border-black">
           <Image
-            src="/hero-banner.png"
+            src="hero-banner.png"
             fill
             className="object-cover"
             alt="Mew Donalds Banner Sign"

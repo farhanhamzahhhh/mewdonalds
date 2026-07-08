@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "Stopbuck";
-  src: url("/fonts/Stopbuck.ttf");
+  src: url("./fonts/Stopbuck.ttf");
 }
 
 :root {

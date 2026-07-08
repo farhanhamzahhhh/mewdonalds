@@ -22,7 +22,7 @@ const About = () => {
             <div className="relative w-full max-w-[450px] aspect-square rounded-3xl overflow-hidden border-4 border-mewdonYellow shadow-2xl glow-yellow bg-stone-900">
               <Image
                 className="object-cover p-2"
-                src="/about-chef.png"
+                src="about-chef.png"
                 fill
                 alt="Chef Mewdon cooking"
               />

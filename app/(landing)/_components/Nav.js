@@ -37,7 +37,7 @@ const Nav = () => {
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
-              src="/logo-coin.jpg"
+              src="logo-coin.jpg"
               width={80}
               height={80}
               className="h-12 w-12 rounded-full border-2 border-mewdonYellow object-cover"

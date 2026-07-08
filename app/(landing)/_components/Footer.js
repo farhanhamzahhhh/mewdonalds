@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-[85rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-3">
           <Image
-            src="/logo-coin.jpg"
+            src="logo-coin.jpg"
             width={60}
             height={60}
             className="rounded-full border border-mewdonRed h-10 w-10 object-cover"

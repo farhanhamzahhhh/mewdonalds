@@ -15,7 +15,7 @@ const HowToBuy = () => {
           </h3>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 justify-items-center mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20 justify-items-center mb-20">
           <OrderCard order={1} title="Download Phantom" style="rotate-1">
             Download the Phantom wallet app or browser extension. Set up your wallet account and store your recovery phrase securely in the kitchen safe.
           </OrderCard>

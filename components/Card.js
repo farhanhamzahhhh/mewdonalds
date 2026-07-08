@@ -12,7 +12,7 @@ const Card = ({ props: { img, title, desc, price } }) => {
         <div className="border-b-2 border-stone-800 pb-3 flex justify-center bg-stone-950 p-2 rounded-lg">
           <div className="relative w-40 h-40">
             <Image
-              src={`/${img}`}
+              src={img}
               alt={title}
               fill
               className="object-contain"
