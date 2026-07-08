@@ -1,23 +1,35 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Copy } from "@/components/icons";
 import { contractAddress } from "@/constants";
 
 const ContractAddress = () => {
   const [copyStatus, setCopyStatus] = useState("idle"); // "idle" | "copied" | "failed"
   const [textToCopy] = useState(contractAddress);
+  const timeoutRef = useRef(null);
 
   const copyText = async () => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
     try {
       await navigator.clipboard.writeText(textToCopy);
       setCopyStatus("copied");
-      setTimeout(() => setCopyStatus("idle"), 2000);
+      timeoutRef.current = setTimeout(() => setCopyStatus("idle"), 2000);
     } catch (error) {
       setCopyStatus("failed");
-      setTimeout(() => setCopyStatus("idle"), 2000);
+      timeoutRef.current = setTimeout(() => setCopyStatus("idle"), 2000);
     }
   };
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   return (
     <div className="relative bg-white text-black p-4 rounded-lg shadow-lg border-t-8 border-dashed border-mewdonRed font-mono text-sm sm:text-base border border-gray-300">
@@ -28,7 +40,7 @@ const ContractAddress = () => {
       
       <div className="flex justify-between items-center my-2 gap-4">
         <span className="font-bold uppercase tracking-wider text-xs">CONTRACT ADDR:</span>
-        <span className="font-mono text-xs sm:text-sm bg-gray-100 px-2 py-1 rounded select-all truncate max-w-[240px] md:max-w-none">
+        <span className="inline-block font-mono text-xs sm:text-sm bg-gray-100 px-2 py-1 rounded select-all truncate max-w-[240px] md:max-w-none">
           {textToCopy}
         </span>
       </div>
