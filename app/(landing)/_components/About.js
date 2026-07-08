@@ -3,91 +3,49 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="relative">
-      <div className="flex absolute -top-24 max-w-full overflow-clip">
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 rotate-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 -rotate-12"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 rotate-12"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 -rotate-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 rotate-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 -rotate-12"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 rotate-12"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6 -rotate-6"></div>
-        <div className="cloud -ms-6"></div>
-        <div className="cloud -ms-6"></div>
-      </div>
-      <div id="about" className="max-w-[85rem] px-4 py-10 sm:py-14 mx-auto">
-        <div className="my-7">
-          <h2 className="font-stopbuck text-6xl text-duis text-shadow text-center mt-14">
-            About Dúi
+    <div id="about" className="relative py-20 bg-mewdonDark overflow-hidden border-t border-b border-black">
+      {/* Decorative fast food checkerboard border */}
+      <div className="absolute top-0 left-0 w-full h-4 bg-repeat-x" style={{ backgroundImage: "linear-gradient(45deg, #db0007 25%, transparent 25%), linear-gradient(-45deg, #db0007 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #db0007 75%), linear-gradient(-45deg, transparent 75%, #db0007 75%)", backgroundSize: "20px 20px" }}></div>
+
+      <div className="max-w-[85rem] px-6 py-10 mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
+            Our Kitchen Story
           </h2>
-          <h3 className="font-stopbuck text-2xl text-center italic text-black">
-            {`(Nguyen Van Dui)`}
+          <h3 className="font-stopbuck text-2xl tracking-widest text-white mt-2">
+            WHO IS CHEF MEWDON? 🍳
           </h3>
         </div>
-        <div className="grid lg:grid-cols-2 gap-6">
-          <div className="">
-            <Image
-              className="h-full object-cover"
-              src="/collection/9.png"
-              width={700}
-              height={700}
-              alt="Dui Image"
-            />
+
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="flex justify-center">
+            <div className="relative w-full max-w-[450px] aspect-square rounded-3xl overflow-hidden border-4 border-mewdonYellow shadow-2xl glow-yellow bg-stone-900">
+              <Image
+                className="object-cover p-2"
+                src="/about-chef.png"
+                fill
+                alt="Chef Mewdon cooking"
+              />
+            </div>
           </div>
 
-          <div className="p-4 h-full sm:p-6">
-            <h3 className="font-mono text-lg sm:text-2xl text-[#33271e] tracking-widest text-justify sm:text-left">
-              <p className="indent-12">
-                <span className="text-3xl font-bold">Dui</span>, affectionately
-                known as the{" "}
-                <span className="font-semibold italic">{'"meme dog"'}</span>{" "}
-                captured the hearts of millions worldwide with his one-of-a-kind
-                appearance and hilariously expressive face.{" "}
+          <div className="space-y-6 text-gray-200">
+            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+              Meet <span className="text-mewdonYellow font-bold text-2xl">Chef Mewdon</span>, the hardest working feline in the fast-food industry. For years, he cooked countless burgers, flipped hot fries, and served shakes for greedy humans at minimum claw-wage, only to be rewarded with cheap kibble.
+            </p>
+            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+              One day, Chef Mewdon decided he had enough! He knocked a tray of cups off the counter (for dominance), walked out of the kitchen, and launched his own decentralized franchise right on the <span className="bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text font-bold">Solana blockchain</span>.
+            </p>
+            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+              Now, he is flipping <span className="text-mewdonRed font-extrabold text-2xl">$MEWDON</span> tokens instead of beef patties, building a global army of hungry cats, and making sure the liquidity is locked tighter than the restaurant&apos;s safe box!
+            </p>
+            
+            <div className="pt-6 border-t border-gray-800">
+              <p className="font-stopbuck text-mewdonYellow text-2xl text-center lg:text-left">
+                No human managers. No bad shifts. Just pure financial taste! 🍔
               </p>
-              <p className="indent-12 mt-3">
-                His photos first went viral in early 2020, became an instant
-                internet sensation. People adored his quirky expressions, which
-                seemed to perfectly match countless relatable moods, turning{" "}
-                <span className=" italic font-bold">Dui</span> into a staple of
-                internet humor.
-              </p>
-              <p className="indent-12 mt-3">
-                His lovable nature brought joy and laughter to a global audience
-                during challenging times, making him a symbol of light-hearted
-                fun.
-              </p>
-            </h3>
+            </div>
           </div>
-        </div>
-
-        <div className="mt-10 font-mono text-lg sm:text-2xl text-[#33271e] tracking-widest text-center">
-          <p>
-            Unfortunately 🥹, <span className="text-3xl font-bold">Dui</span>{" "}
-            passed away on{" "}
-            <span className="italic font-semibold">October 18, 2023</span>,
-            after a tragic snake🐍 bite.
-          </p>
-          <p className="text-4xl p-10">
-            But now{" "}
-            <span className="text-5xl font-bold underline decoration-duis">
-              Dui
-            </span>{" "}
-            is forever on{" "}
-            <span className="text-5xl bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text font-bold">
-              Solana
-            </span>{" "}
-          </p>
         </div>
       </div>
     </div>
