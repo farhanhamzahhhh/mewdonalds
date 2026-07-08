@@ -4,30 +4,30 @@ import "./style.css";
 
 export const PumpFun = () => {
   return (
-    <div class="flag pumpfun">
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
+    <div className="flag pumpfun">
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
 
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
 
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
 
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
-      <div class="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
+      <div className="column"></div>
     </div>
   );
 };
