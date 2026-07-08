@@ -5,10 +5,9 @@ import Image from "next/image";
 
 const navigation = [
   { name: "About", href: "#about" },
-  { name: "Exchanges", href: "#exchanges" },
-  { name: "Tokenomics", href: "#tokenomics" },
-  { name: "How to buy", href: "#buy" },
-  // { name: "Wall of love", href: "#love" },
+  { name: "Menu", href: "#menu" },
+  { name: "Drive-Thru", href: "#drive-thru" },
+  { name: "Order Steps", href: "#order-steps" },
 ];
 
 const Nav = () => {
@@ -29,47 +28,45 @@ const Nav = () => {
   return (
     <nav
       aria-label="Global"
-      className={`fixed top-0 left-0 w-full z-50 shadow-lg transition-all duration-300 ${
-        isScrolled ? "h-20" : "h-28"
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "h-20 bg-black/90 shadow-lg border-b border-mewdonRed" : "h-28 bg-black/40 backdrop-blur-sm border-b border-transparent"
       }`}
     >
-      <div className="flex items-center justify-between p-4 lg:px-8 mx-auto max-w-screen-xl">
-        {/* Logo */}
+      <div className="flex items-center justify-between p-4 lg:px-8 mx-auto max-w-screen-xl h-full">
         <div className="flex lg:flex-1">
-          <a href="#" className="-m-1.5 p-1.5">
+          <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
-              src="/logo-coin.png"
-              width={500}
-              height={500}
-              className={`transition-all duration-300 ${
-                isScrolled ? "h-14 w-auto" : "h-20 w-auto"
-              }`}
+              src="/logo-coin.jpg"
+              width={80}
+              height={80}
+              className="h-12 w-12 rounded-full border-2 border-mewdonYellow object-cover"
               alt="logo coin"
             />
+            <span className="font-stopbuck text-mewdonYellow text-2xl hidden sm:inline tracking-wider">
+              MewDonald&apos;s
+            </span>
           </a>
         </div>
 
-        {/* Navigation Links */}
         <div className="hidden lg:flex lg:gap-x-12 cursor-pointer uppercase">
           {navigation.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className={`transition duration-200 text-gray-900 text-shadow-duis-not-hover text-2xl font-bold font-stopbuck tracking-wider hover:text-duis hover:decoration-solid hover:decoration-gray-500`}
+              className="transition duration-200 text-white hover:text-mewdonYellow text-xl font-bold font-stopbuck tracking-wider"
             >
               {item.name}
             </a>
           ))}
         </div>
 
-        {/* Buy Button */}
         <div className="lg:flex lg:flex-1 lg:justify-end">
           <a
             href="https://dexscreener.com/solana/8j5r6kteet9cm6wamq2mwb2sneu97cz1jtksdg76moon"
             target="_blank"
-            className="transition duration-200 font-stopbuck text-lg sm:text-2xl rounded-xl px-3.5 py-2.5 font-medium text-duis shadow-2xl bg-black hover:bg-duis hover:text-gray-800 hover:outline-black outline outline-2 outline-offset-0"
+            className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-white shadow-2xl bg-mewdonRed hover:bg-mewdonYellow hover:text-black border-2 border-black"
           >
-            Buy $DUIS
+            Order $MEWDON
           </a>
         </div>
       </div>
