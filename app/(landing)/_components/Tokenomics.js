@@ -3,47 +3,55 @@ import Card from "@/components/Card";
 
 const cards = [
   {
-    img: "max-supply.gif",
-    title: "Max Supply",
-    desc: "1.000.000.000",
+    img: "burger.png",
+    title: "LP Bonding",
+    desc: "85% of Supply",
+    price: "Ingredients: Pump.fun initial supply to drive the market price freely.",
   },
   {
-    img: "tax.gif",
-    title: "Tax",
-    desc: "0%",
+    img: "fries.png",
+    title: "Airdrop Pool",
+    desc: "5% of Supply",
+    price: "Ingredients: Crispy rewards for early shillers & loyal keyboard cat warriors.",
   },
   {
-    img: "burn.gif",
-    title: "Liquidity",
-    desc: "Burnt",
+    img: "shake.png",
+    title: "Marketing",
+    desc: "5% (Locked)",
+    price: "Ingredients: Timelocked funds to pay for fast-food memes & future CEX tier list.",
   },
   {
-    img: "solana.gif",
-    title: "Network",
-    desc: "Solana",
+    img: "soda.png",
+    title: "Team LP",
+    desc: "5% (Timelock)",
+    price: "Ingredients: Timelocked allocation for long-term project recipe maintenance.",
   },
 ];
 
 const Tokenomics = () => {
   return (
-    <div id="tokenomics" className="max-w-[85rem] mx-auto py-12">
-      <div className="my-16">
-        <h2 className="font-stopbuck text-6xl text-duis text-shadow text-center">
-          Tokenomics
-        </h2>
-        <h3 className="font-stopbuck text-2xl text-center text-black">
-          {`It's Moonshot tokenomics!`}
-        </h3>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-flow-col gap-5 gap-y-20 justify-center justify-items-center">
-        {cards.map((card, idx) => (
-          <div key={idx} className="shrink-0">
-            <Card props={card} />
-          </div>
-        ))}
+    <div id="menu" className="relative py-20 bg-[#15110f] border-b border-black">
+      <div className="max-w-[85rem] mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
+            MewDonald&apos;s Menu
+          </h2>
+          <h3 className="font-stopbuck text-2xl text-white tracking-widest mt-2">
+            TASTY RECIPES & TOKEN DETAILS 🥤
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 justify-center">
+          {cards.map((card, idx) => (
+            <div key={idx} className="w-full flex justify-center">
+              <Card props={card} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
 export default Tokenomics;
+
