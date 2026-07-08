@@ -4,75 +4,38 @@ import ContractAddress from "@/components/ContractAddress";
 
 const HowToBuy = () => {
   return (
-    <div id="buy" className="max-w-[85rem] mx-auto p-12">
-      <div className="my-16">
-        <h2 className="font-stopbuck text-6xl text-duis text-shadow text-center">
-          How To Buy
-        </h2>
-        <h3 className="font-stopbuck text-2xl text-center text-black">
-          {`Just 4️⃣ steps to get rich 🤑`}
-        </h3>
-      </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-36 justify-items-center">
-        <OrderCard order={1} title={"create a wallet"} style={"rotate-3"}>
-          <span>
-            Download{" "}
-            <a
-              href="https://phantom.app"
-              target="_blank"
-              className="uppercase font-extrabold text-[#ab9ff2] text-2xl"
-            >
-              phantom
-            </a>{" "}
-            or your{" "}
-            <span className="bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text uppercase font-extrabold text-2xl">
-              Solana
-            </span>{" "}
-            wallet of choice and follow the simple steps to create a new
-            account.
-          </span>
-        </OrderCard>
-        <OrderCard order={2} title={"connect to dex"} style={"-rotate-6"}>
-          <span>
-            If you don’t have any{" "}
-            <span className="bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text uppercase font-extrabold text-2xl">
-              $SOL
-            </span>
-            , you can buy directly on{" "}
-            <a
-              href="https://phantom.app"
-              target="_blank"
-              className="uppercase font-extrabold text-[#ab9ff2] text-2xl"
-            >
-              phantom
-            </a>{" "}
-            , transfer from another wallet, or buy on another exchange and send
-            it to your wallet.
-          </span>
-        </OrderCard>
-        <OrderCard order={3} title={"swap $Sol for $duis"} style={"-rotate-1"}>
-          <span>
-            Paste the token address (CA) into wallet and swap{" "}
-            <span className="bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text uppercase font-extrabold text-2xl">
-              $SOL
-            </span>{" "}
-            for <span className="font-extrabold text-2xl text-duis">$DUIS</span>
-            .{`There's zero taxes so you don’t need to worry.`}
-          </span>
-        </OrderCard>
-        <OrderCard order={4} title={"you're duis-dawg!‍"} style={"rotate-2"}>
-          <span>
-            Welcome to the <br />
-            <span className="uppercase font-extrabold text-2xl underline decoration-duis">
-              Duis family
-            </span>
-            !
-          </span>
-        </OrderCard>
-      </div>
+    <div id="order-steps" className="relative py-20 bg-mewdonDark border-b border-black">
+      <div className="max-w-[85rem] mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
+            How To Order
+          </h2>
+          <h3 className="font-stopbuck text-2xl text-white tracking-widest mt-2">
+            GET FRESH $MEWDON IN 4 EASY STEPS 🧾
+          </h3>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 justify-items-center mb-16">
+          <OrderCard order={1} title="Download Phantom" style="rotate-1">
+            Download the Phantom wallet app or browser extension. Set up your wallet account and store your recovery phrase securely in the kitchen safe.
+          </OrderCard>
+          
+          <OrderCard order={2} title="Prepare SOL Cash" style="-rotate-1">
+            Deposit Solana ($SOL) directly into your newly created Phantom wallet, or buy SOL on an exchange and send it to your wallet address.
+          </OrderCard>
+          
+          <OrderCard order={3} title="Order at Counter" style="-rotate-1">
+            Head over to Raydium or Jupiter DEX. Copy and paste the {"Chef's"} official Contract Address (CA) into the swap terminal.
+          </OrderCard>
+          
+          <OrderCard order={4} title="Enjoy your Meal!" style="rotate-1">
+            Swap your $SOL for $MEWDON. Slippage auto-calculates. Grab your burger bag, take a bite, and welcome to the team!
+          </OrderCard>
+        </div>
 
-      <div className="my-16">
-        <ContractAddress />
+        <div className="max-w-2xl mx-auto">
+          <ContractAddress />
+        </div>
       </div>
     </div>
   );
