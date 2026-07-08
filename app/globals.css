@@ -28,16 +28,6 @@ body {
     4px 4px #201a17, -4px -4px #201a17, -4px 4px #201a17, 4px -4px #201a17;
 }
 
-.text-shadow-duis {
-  text-shadow: 4px 0 #eac837, -4px 0 #eac837, 0 4px #eac837, 0 -4px #eac837,
-    4px 4px #eac837, -4px -4px #eac837, -4px 4px #eac837, 4px -4px #eac837;
-}
-
-.text-shadow-duis-not-hover:not(:hover) {
-  text-shadow: 4px 0 #eac837, -4px 0 #eac837, 0 4px #eac837, 0 -4px #eac837,
-    4px 4px #eac837, -4px -4px #eac837, -4px 4px #eac837, 4px -4px #eac837;
-}
-
 .text-shadow-red {
   text-shadow: 4px 0 #db0007, -4px 0 #db0007, 0 4px #db0007, 0 -4px #db0007,
     4px 4px #db0007, -4px -4px #db0007, -4px 4px #db0007, 4px -4px #db0007;

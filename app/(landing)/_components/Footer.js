@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { dexscreenerLink, twitterLink, telegramLink } from "@/constants";
 
 const Footer = () => {
   return (
@@ -20,7 +21,7 @@ const Footer = () => {
 
         <div className="flex gap-6">
           <a
-            href="https://x.com/mewdonalds"
+            href={twitterLink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
@@ -28,13 +29,15 @@ const Footer = () => {
             Twitter/X
           </a>
           <a
-            href="#"
+            href={telegramLink}
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
           >
             Telegram
           </a>
           <a
-            href="https://dexscreener.com/solana/8j5r6kteet9cm6wamq2mwb2sneu97cz1jtksdg76moon"
+            href={dexscreenerLink}
             target="_blank"
             rel="noopener noreferrer"
             className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"

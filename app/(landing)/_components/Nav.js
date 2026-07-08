@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import { dexscreenerLink, twitterLink } from "@/constants";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -62,7 +63,7 @@ const Nav = () => {
 
         <div className="lg:flex lg:flex-1 lg:justify-end">
           <a
-            href="https://dexscreener.com/solana/8j5r6kteet9cm6wamq2mwb2sneu97cz1jtksdg76moon"
+            href={dexscreenerLink}
             target="_blank"
             className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-white shadow-2xl bg-mewdonRed hover:bg-mewdonYellow hover:text-black border-2 border-black"
           >
