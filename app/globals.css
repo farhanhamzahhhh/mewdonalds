@@ -8,15 +8,8 @@
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #121212;
+  --foreground: #ffffff;
 }
 
 html {
@@ -43,6 +36,34 @@ body {
 .text-shadow-duis-not-hover:not(:hover) {
   text-shadow: 4px 0 #eac837, -4px 0 #eac837, 0 4px #eac837, 0 -4px #eac837,
     4px 4px #eac837, -4px -4px #eac837, -4px 4px #eac837, 4px -4px #eac837;
+}
+
+.text-shadow-red {
+  text-shadow: 4px 0 #db0007, -4px 0 #db0007, 0 4px #db0007, 0 -4px #db0007,
+    4px 4px #db0007, -4px -4px #db0007, -4px 4px #db0007, 4px -4px #db0007;
+}
+
+.text-shadow-yellow {
+  text-shadow: 4px 0 #ffbc0d, -4px 0 #ffbc0d, 0 4px #ffbc0d, 0 -4px #ffbc0d,
+    4px 4px #ffbc0d, -4px -4px #ffbc0d, -4px 4px #ffbc0d, 4px -4px #ffbc0d;
+}
+
+.text-shadow-black {
+  text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000,
+    3px 3px #000, -3px -3px #000, -3px 3px #000, 3px -3px #000;
+}
+
+.glow-yellow {
+  box-shadow: 0 0 15px rgba(255, 188, 13, 0.4);
+}
+
+.glow-red {
+  box-shadow: 0 0 15px rgba(219, 0, 7, 0.4);
+}
+
+.menu-border {
+  border: 4px solid #000;
+  box-shadow: 5px 5px 0px #db0007;
 }
 
 .cloud {
