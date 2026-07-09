@@ -1,14 +1,15 @@
 import React from "react";
 import LinkCardCircle from "@/components/LinkCardCircle";
+import { telegramLink, twitterLink } from "@/constants";
 
 const cards = [
   {
-    link: "https://t.me/duis_solana",
+    link: telegramLink,
     title: "telegram",
     icon: "Telegram",
   },
   {
-    link: "https://x.com/duisonsolana",
+    link: twitterLink,
     title: "x",
     icon: "X",
   },

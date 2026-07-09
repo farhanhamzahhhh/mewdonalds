@@ -36,14 +36,12 @@ const Footer = () => {
           >
             Telegram
           </a>
-          <a
-            href={dexscreenerLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
+          <span
+            className="text-stone-600 font-mono text-sm uppercase cursor-not-allowed"
+            title="Coming Soon"
           >
-            DexScreener
-          </a>
+            DexScreener (Soon)
+          </span>
         </div>
         
         <div className="text-xs font-mono text-stone-600 text-center md:text-right">

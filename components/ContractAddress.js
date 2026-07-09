@@ -32,33 +32,38 @@ const ContractAddress = () => {
   }, []);
 
   return (
-    <div className="relative bg-white text-black p-4 rounded-lg shadow-lg border-t-8 border-dashed border-mewdonRed font-mono text-sm sm:text-base border border-gray-300">
-      <div className="text-center border-b border-dashed border-gray-400 pb-2 mb-2">
-        <h4 className="font-bold tracking-widest uppercase">MEWDONALD&apos;S INC.</h4>
-        <p className="text-xs">ORDER #777 - SOLANA CHAIN</p>
+    <div className="relative bg-white text-black p-4 sm:p-5 rounded-lg shadow-lg border-t-8 border-dashed border-mewdonRed font-sans text-sm sm:text-base border border-gray-300">
+      <div className="text-center border-b border-dashed border-gray-400 pb-2.5 mb-3">
+        <h4 className="font-extrabold tracking-widest uppercase">MEWDONALD&apos;S INC.</h4>
+        <p className="text-xs font-mono text-gray-500 mt-0.5">ORDER #777 - SOLANA CHAIN</p>
       </div>
       
-      <div className="flex justify-between items-center my-2 gap-4">
-        <span className="font-bold uppercase tracking-wider text-xs">CONTRACT ADDR:</span>
-        <span className="inline-block font-mono text-xs sm:text-sm bg-gray-100 px-2 py-1 rounded select-all truncate max-w-[240px] md:max-w-none">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center my-3 gap-2 sm:gap-4">
+        <span className="font-bold uppercase tracking-wider text-xs text-gray-700">CONTRACT ADDR:</span>
+        <span className="inline-block font-mono text-xs sm:text-sm bg-gray-100 px-2 py-1.5 rounded select-all truncate max-w-full sm:max-w-[280px] md:max-w-none border border-gray-200">
           {textToCopy}
         </span>
       </div>
 
-      <div className="flex justify-between items-center mt-3 pt-3 border-t border-dashed border-gray-400">
-        <div>
-          <span className="text-xs block text-gray-500">TAX: 0% | SLIPPAGE: AUTO</span>
-          <span className="font-bold text-mewdonRed">
+      <div className="flex flex-col sm:flex-row justify-between items-stretch sm:items-center mt-4 pt-3 gap-3 border-t border-dashed border-gray-400">
+        <div className="text-center sm:text-left">
+          <span className="text-[10px] sm:text-xs block text-gray-500 font-bold tracking-wider">TAX: 0% | SLIPPAGE: AUTO</span>
+          <span className="font-sans font-black text-mewdonRed text-sm sm:text-base">
             {copyStatus === "copied"
-              ? "COPIED TO DOMPET!"
+              ? "COPIED TO DOMPET! 🍔"
               : copyStatus === "failed"
-              ? "FAILED TO COPY!"
+              ? "FAILED TO COPY! ❌"
               : "PENDING RECEIPT..."}
           </span>
         </div>
         <button
           onClick={copyText}
-          className="transition duration-200 font-stopbuck text-base rounded-lg px-4 py-2 text-white bg-mewdonRed hover:bg-mewdonYellow hover:text-black border border-black flex items-center gap-2 shadow"
+          disabled={textToCopy === "COMING SOON"}
+          className={`transition duration-200 font-sans font-extrabold text-sm sm:text-base rounded-lg px-4 py-2.5 text-white border flex items-center justify-center gap-2 shadow ${
+            textToCopy === "COMING SOON"
+              ? "bg-stone-400 text-stone-600 border-stone-500 cursor-not-allowed opacity-60"
+              : "bg-mewdonRed hover:bg-mewdonYellow hover:text-black border-black active:scale-95"
+          }`}
         >
           <Copy /> COPY TICKET
         </button>

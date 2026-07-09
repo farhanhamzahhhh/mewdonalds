@@ -2,7 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { dexscreenerLink, twitterLink } from "@/constants";
+import { dexscreenerLink, twitterLink, telegramLink } from "@/constants";
+import { Telegram, X } from "@/components/icons";
 
 const navigation = [
   { name: "About", href: "#about" },
@@ -29,9 +30,8 @@ const Nav = () => {
   return (
     <nav
       aria-label="Global"
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "h-20 bg-black/90 shadow-lg border-b border-mewdonRed" : "h-28 bg-black/40 backdrop-blur-sm border-b border-transparent"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "h-20 bg-black/90 shadow-lg border-b border-mewdonRed" : "h-28 bg-black/40 backdrop-blur-sm border-b border-transparent"
+        }`}
     >
       <div className="flex items-center justify-between p-4 lg:px-8 mx-auto max-w-screen-xl h-full">
         <div className="flex lg:flex-1">
@@ -61,13 +61,32 @@ const Nav = () => {
           ))}
         </div>
 
-        <div className="lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href={dexscreenerLink}
-            target="_blank"
-            className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-white shadow-2xl bg-mewdonRed hover:bg-mewdonYellow hover:text-black border-2 border-black"
+        <div className="flex lg:flex-1 justify-end items-center gap-2 sm:gap-3">
+
+          <button
+            disabled
+            className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-stone-400 bg-stone-850 border-2 border-stone-700 cursor-not-allowed opacity-75 shadow-inner"
+            title="Coming Soon"
           >
             Order $MEWDON
+          </button>
+          <a
+            href={telegramLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:hidden transition duration-200 p-2 text-white bg-[#24A1DE] hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
+            aria-label="Telegram"
+          >
+            <Telegram />
+          </a>
+          <a
+            href={twitterLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="lg:hidden transition duration-200 p-2 text-white bg-black hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
+            aria-label="X (Twitter)"
+          >
+            <X />
           </a>
         </div>
       </div>

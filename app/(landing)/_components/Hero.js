@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import ContractAddress from "@/components/ContractAddress";
+import Countdown from "@/components/Countdown";
 
 const Hero = () => {
   return (
@@ -32,6 +33,8 @@ const Hero = () => {
           </p>
         </div>
       </div>
+      
+      <Countdown />
       
       {/* Contract address receipt block */}
       <div className="mt-12 w-full max-w-xl">

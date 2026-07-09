@@ -2,7 +2,7 @@ import React from "react";
 
 const OrderCard = ({ children, order, title, style }) => {
   return (
-    <div className={`group relative block min-h-44 w-full max-w-sm ${style} transition-transform hover:scale-105`}>
+    <div className={`group relative block min-h-44 w-full max-w-xs sm:max-w-sm ${style} transition-transform hover:scale-105`}>
       <span className="absolute inset-0 bg-mewdonRed rounded-xl border-4 border-black"></span>
 
       <div className="relative h-full transform p-4 sm:p-5 border-4 border-black bg-stone-900 text-white rounded-xl transition-transform -translate-x-2 -translate-y-2 shadow-2xl">
