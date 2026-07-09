@@ -32,6 +32,9 @@ export const metadata = {
     index: true,
     follow: true,
   },
+  alternates: {
+    canonical: "https://mewdonalds.com",
+  },
 };
 
 export default function RootLayout({ children }) {
