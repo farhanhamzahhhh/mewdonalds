@@ -6,6 +6,6 @@ export default function robots() {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://mewdonalds.com/sitemap.xml",
+    sitemap: "https://mewdon.site/sitemap.xml",
   };
 }

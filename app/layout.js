@@ -1,14 +1,14 @@
 import "./globals.css";
 
 export const metadata = {
-  metadataBase: new URL("https://mewdonalds.com"),
+  metadataBase: new URL("https://mewdon.site"),
   title: "MewDonald's ($MEWDON) - Fast Food Cooking Cat Meme Coin on Solana",
   description: "Meet Chef Mewdon at MewDonald's ($MEWDON), the premier fast-food cooking cat meme coin on Solana. Zero taxes, LP burned, and serving fresh daily!",
   keywords: ["MewDonald's", "MEWDON", "Solana", "Meme Coin", "Solana Meme Coin", "Crypto", "Chef Mewdon", "Fast Food Cat"],
   openGraph: {
     title: "MewDonald's ($MEWDON) - Fast Food Cooking Cat on Solana",
     description: "Meet Chef Mewdon at MewDonald's ($MEWDON), the premier fast-food cooking cat meme coin on Solana. Zero taxes, LP burned, and serving fresh daily!",
-    url: "https://mewdonalds.com",
+    url: "https://mewdon.site",
     siteName: "MewDonald's",
     images: [
       {
@@ -33,7 +33,7 @@ export const metadata = {
     follow: true,
   },
   alternates: {
-    canonical: "https://mewdonalds.com",
+    canonical: "https://mewdon.site",
   },
 };
 
