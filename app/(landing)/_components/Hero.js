@@ -9,6 +9,8 @@ const Hero = () => {
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#db0007_1px,transparent_1px)] [background-size:16px_16px]"></div>
       
+      <h1 className="sr-only">MewDonald&apos;s ($MEWDON) Meme Coin on Solana</h1>
+      
       {/* Main sign board frame */}
       <div className="relative w-full max-w-4xl bg-black border-8 border-mewdonRed rounded-3xl p-4 shadow-2xl glow-red flex flex-col items-center">
         {/* Neon Hanging chains decoration */}
