@@ -65,7 +65,7 @@ const Nav = () => {
 
           <button
             disabled
-            className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-stone-400 bg-stone-850 border-2 border-stone-700 cursor-not-allowed opacity-75 shadow-inner"
+            className="transition duration-200 font-stopbuck text-lg sm:text-xl rounded-xl px-4 py-2 font-medium text-white bg-mewdonRed border-2 border-mewdonYellow cursor-not-allowed shadow-inner"
             title="Coming Soon"
           >
             Order $MEWDON
