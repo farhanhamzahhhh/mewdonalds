@@ -20,7 +20,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               1
             </div>
-            <h4 className="text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 1: Opening the Kitchen (Launch)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
@@ -36,7 +36,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               2
             </div>
-            <h4 className="text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 2: The Drive-Thru (Momentum)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
@@ -52,7 +52,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               3
             </div>
-            <h4 className="text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 3: Global Franchise (Community)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">

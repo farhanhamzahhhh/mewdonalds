@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Card = ({ props: { img, title, desc, price } }) => {
   return (
-    <div className="group relative block w-full max-w-sm">
+    <div className="group relative block w-full max-w-xs sm:max-w-sm">
       {/* Background card frame border */}
       <span className="absolute inset-0 bg-mewdonRed rounded-2xl border-4 border-black"></span>
 
