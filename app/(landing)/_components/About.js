@@ -7,7 +7,7 @@ const About = () => {
       {/* Decorative fast food checkerboard border */}
       <div className="absolute top-0 left-0 w-full h-4 bg-repeat-x" style={{ backgroundImage: "linear-gradient(45deg, #db0007 25%, transparent 25%), linear-gradient(-45deg, #db0007 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #db0007 75%), linear-gradient(-45deg, transparent 75%, #db0007 75%)", backgroundSize: "20px 20px" }}></div>
 
-      <div className="max-w-[85rem] px-6 md:px-12 lg:px-16 py-10 mx-auto">
+      <div className="max-w-[85rem] px-6 md:px-8 lg:px-12 xl:px-16 py-10 mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
             Our Kitchen Story

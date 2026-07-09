@@ -5,7 +5,7 @@ import Countdown from "@/components/Countdown";
 
 const Hero = () => {
   return (
-    <div className="relative pt-32 pb-16 bg-mewdonDark min-h-dvh flex flex-col justify-center items-center px-6 md:px-12 lg:px-16 overflow-hidden">
+    <div className="relative pt-32 pb-16 bg-mewdonDark min-h-dvh flex flex-col justify-center items-center px-6 md:px-8 lg:px-12 xl:px-16 overflow-hidden">
       {/* Background patterns */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#db0007_1px,transparent_1px)] [background-size:16px_16px]"></div>
 

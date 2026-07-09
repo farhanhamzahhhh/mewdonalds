@@ -3,7 +3,7 @@ import React from "react";
 const Roadmap = () => {
   return (
     <div id="drive-thru" className="relative py-20 bg-[#1c1714] border-b border-black">
-      <div className="max-w-4xl mx-auto px-6 md:px-12 lg:px-16">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-16">
           <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
             The Drive-Thru Plan
