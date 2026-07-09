@@ -4,7 +4,7 @@ import { dexscreenerLink, twitterLink, telegramLink } from "@/constants";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-stone-400 py-12 px-6 border-t border-stone-900">
+    <footer className="bg-black text-stone-400 py-12 px-6 md:px-12 lg:px-16 border-t border-stone-900">
       <div className="max-w-[85rem] mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex items-center gap-3">
           <Image

@@ -33,7 +33,7 @@ const Nav = () => {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? "h-20 bg-black/90 shadow-lg border-b border-mewdonRed" : "h-28 bg-black/40 backdrop-blur-sm border-b border-transparent"
         }`}
     >
-      <div className="flex items-center justify-between p-4 lg:px-8 mx-auto max-w-screen-xl h-full">
+      <div className="flex items-center justify-between py-4 px-6 md:px-12 lg:px-16 mx-auto max-w-screen-xl h-full">
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
             <Image
@@ -49,7 +49,7 @@ const Nav = () => {
           </a>
         </div>
 
-        <div className="hidden lg:flex lg:gap-x-12 cursor-pointer uppercase">
+        <div className="hidden md:flex md:gap-x-6 lg:gap-x-12 cursor-pointer uppercase">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -74,7 +74,7 @@ const Nav = () => {
             href={telegramLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:hidden transition duration-200 p-2 text-white bg-[#24A1DE] hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
+            className="md:hidden transition duration-200 p-2 text-white bg-[#24A1DE] hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
             aria-label="Telegram"
           >
             <Telegram />
@@ -83,7 +83,7 @@ const Nav = () => {
             href={twitterLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="lg:hidden transition duration-200 p-2 text-white bg-black hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
+            className="md:hidden transition duration-200 p-2 text-white bg-black hover:bg-mewdonYellow hover:text-black hover:border-black border-2 border-mewdonYellow rounded-full shadow-md flex items-center justify-center text-xl w-12 h-12"
             aria-label="X (Twitter)"
           >
             <X />
