@@ -34,17 +34,27 @@ const HowToBuy = () => {
           </OrderCard>
         </div>
 
-        <div className="max-w-2xl mx-auto mb-12 p-5 bg-red-950/20 border-2 border-mewdonRed/30 rounded-2xl shadow-lg relative overflow-hidden text-center">
-          <div className="absolute inset-0 opacity-5 bg-[radial-gradient(#db0007_1px,transparent_1px)] [background-size:12px_12px]"></div>
-          <div className="relative z-10 font-mono text-sm leading-relaxed">
-            <span className="font-stopbuck text-mewdonYellow text-lg block mb-2 tracking-widest animate-pulse">
-              📢 CHEF&apos;S NOTICE
-            </span>
-            <p className="text-gray-300">
-              We&apos;re launching on <a href={pumpfunLink} target="_blank" rel="noopener noreferrer" className="text-mewdonYellow hover:underline font-bold">pump.fun</a> first! 
-              Raydium and Jupiter swaps will be unlocked as soon as we hit the 
-              <span className="text-mewdonYellow font-bold"> bonding curve target</span>.
-            </p>
+        <div className="relative max-w-2xl mx-auto mb-12">
+          {/* Background offset layer */}
+          <span className="absolute inset-0 bg-mewdonYellow rounded-xl border-4 border-black"></span>
+
+          {/* Foreground content layer */}
+          <div className="relative p-5 border-4 border-black bg-stone-900 text-white rounded-xl transform -translate-x-2 -translate-y-2 shadow-2xl">
+            {/* Chef Icon Badge */}
+            <div className="absolute -left-4 -top-4 border-4 border-black text-white rounded-full w-12 h-12 flex justify-center items-center text-xl bg-mewdonRed">
+              👨‍🍳
+            </div>
+
+            <div className="p-1 font-mono text-center">
+              <h3 className="text-lg font-stopbuck text-mewdonYellow uppercase tracking-wider mb-3 border-b border-stone-800 pb-2">
+                Chef&apos;s Notice
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
+                We&apos;re launching on <a href={pumpfunLink} target="_blank" rel="noopener noreferrer" className="text-mewdonYellow hover:underline font-bold">pump.fun</a> first! 
+                Raydium and Jupiter swaps will be unlocked as soon as we hit the 
+                <span className="text-mewdonYellow font-bold"> bonding curve target</span>.
+              </p>
+            </div>
           </div>
         </div>
 
