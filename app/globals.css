@@ -14,7 +14,7 @@
   .text-body-sm { @apply text-sm sm:text-base md:text-lg; }
   
   /* Micro Text */
-  .text-micro { @apply text-[10px] sm:text-xs md:text-sm; }
+  .text-micro { @apply text-[8px] sm:text-[10px] md:text-xs; }
 }
 
 @font-face {
