@@ -35,6 +35,9 @@ export const metadata = {
   alternates: {
     canonical: "https://mewdon.site",
   },
+  verification: {
+    google: "seCuixnOGAnDU6vxY58TDX_bn1E3FEfP-YArfuJnX8A",
+  },
 };
 
 export default function RootLayout({ children }) {
