@@ -1,9 +1,11 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { createChart, CandlestickSeries, HistogramSeries } from "lightweight-charts";
+import { createChart, CandlestickSeries, HistogramSeries, PriceScaleMode } from "lightweight-charts";
 
 export default function PumpfunChart() {
   const chartContainerRef = useRef();
+  const chartRef = useRef(null);
+  
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
@@ -17,6 +19,11 @@ export default function PumpfunChart() {
   });
 
   const [hoverData, setHoverData] = useState(null);
+  
+  // Chart interaction states
+  const [priceMode, setPriceMode] = useState(0); // 0 = Normal, 1 = Logarithmic, 2 = Percentage
+  const [isAuto, setIsAuto] = useState(true);
+  const [timeframe, setTimeframe] = useState("1D");
 
   useEffect(() => {
     // Contract Address (Mint Address) dari token.
@@ -98,29 +105,36 @@ export default function PumpfunChart() {
         chart = createChart(chartContainerRef.current, {
           layout: {
             background: { type: 'solid', color: 'transparent' },
-            textColor: '#9ca3af',
+            textColor: '#9ca3af', // Gray text for scales, ensures scales are visible
           },
           grid: {
-            vertLines: { color: '#2d3748', style: 1 },
-            horzLines: { color: '#2d3748', style: 1 },
+            vertLines: { color: 'rgba(45, 55, 72, 0.3)', style: 1 },
+            horzLines: { color: 'rgba(45, 55, 72, 0.3)', style: 1 },
           },
           rightPriceScale: {
             borderVisible: false,
+            visible: true, // Force visible
+            autoScale: true,
+            scaleMargins: {
+              top: 0.1,
+              bottom: 0.25,
+            },
           },
           timeScale: {
             borderVisible: false,
             timeVisible: true,
             secondsVisible: false,
+            visible: true, // Force visible
           },
           crosshair: {
-            mode: 1, // Normal mode
+            mode: 1, // Normal mode allows snap to data
             vertLine: {
-              color: '#4b5563',
+              color: '#9ca3af',
               style: 3, // dashed
               labelBackgroundColor: '#2d3748',
             },
             horzLine: {
-              color: '#4b5563',
+              color: '#9ca3af',
               style: 3,
               labelBackgroundColor: '#2d3748',
             }
@@ -132,7 +146,21 @@ export default function PumpfunChart() {
               return price.toFixed(2);
             },
           },
+          // ENABLE NATIVE TRADINGVIEW PANNING & ZOOMING
+          handleScroll: {
+            mouseWheel: true,
+            pressedMouseMove: true, // Panning canvas
+            horzTouchDrag: true,
+            vertTouchDrag: true,
+          },
+          handleScale: {
+            axisPressedMouseMove: { time: true, price: true }, // Drag scales!
+            mouseWheel: true,
+            pinch: true,
+          },
         });
+        
+        chartRef.current = chart;
 
         const candlestickSeries = chart.addSeries(CandlestickSeries, {
           upColor: '#22c55e', 
@@ -142,12 +170,6 @@ export default function PumpfunChart() {
           wickDownColor: '#ef4444',
         });
         
-        chart.priceScale('right').applyOptions({
-          scaleMargins: {
-            top: 0.1,
-            bottom: 0.25,
-          },
-        });
         candlestickSeries.setData(candleData);
 
         const volumeSeries = chart.addSeries(HistogramSeries, {
@@ -183,21 +205,21 @@ export default function PumpfunChart() {
                });
             }
           } else {
-            setHoverData(null); // Reset when hovering out
+            setHoverData(null);
           }
         });
 
-        // Resize handler
-        const handleResize = () => {
-          if (chartContainerRef.current && chart) {
-            chart.applyOptions({ 
-              width: chartContainerRef.current.clientWidth, 
-              height: chartContainerRef.current.clientHeight 
-            });
-          }
+        // Responsive Resizing via ResizeObserver
+        const resizeObserver = new ResizeObserver(entries => {
+          if (entries.length === 0 || entries[0].target !== chartContainerRef.current) return;
+          const newRect = entries[0].contentRect;
+          chart.applyOptions({ height: newRect.height, width: newRect.width });
+        });
+        resizeObserver.observe(chartContainerRef.current);
+
+        return () => {
+          resizeObserver.disconnect();
         };
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
       } catch (err) {
         console.error(err);
         setError("Failed to load chart data");
@@ -211,6 +233,44 @@ export default function PumpfunChart() {
       if (chart) chart.remove();
     };
   }, []);
+
+  // Sync Price Mode to Chart (Percent / Log / Normal)
+  useEffect(() => {
+    if (chartRef.current) {
+        chartRef.current.priceScale('right').applyOptions({
+            mode: priceMode, // 0 = Normal, 1 = Log, 2 = Percentage
+        });
+        
+        chartRef.current.applyOptions({
+            localization: {
+                priceFormatter: (price) => {
+                    if (priceMode === 2) return price.toFixed(2) + '%'; // Percentage format
+                    if (Math.abs(price) >= 1e6) return (price / 1e6).toFixed(2) + 'M';
+                    if (Math.abs(price) >= 1e3) return (price / 1e3).toFixed(2) + 'K';
+                    return price.toFixed(2);
+                },
+            }
+        });
+    }
+  }, [priceMode]);
+
+  const togglePercent = () => setPriceMode(prev => prev === 2 ? 0 : 2);
+  const toggleLog = () => setPriceMode(prev => prev === 1 ? 0 : 1);
+  
+  const triggerAuto = () => {
+      setIsAuto(true);
+      if (chartRef.current) {
+          chartRef.current.priceScale('right').applyOptions({ autoScale: true });
+          chartRef.current.timeScale().fitContent();
+      }
+  };
+
+  const handleTimeframe = (tf) => {
+      setTimeframe(tf);
+      if (chartRef.current) {
+          chartRef.current.timeScale().fitContent(); // Simplistic timeframe change
+      }
+  };
 
   // Formatters
   const formatMoney = (val) => {
@@ -235,10 +295,9 @@ export default function PumpfunChart() {
 
   return (
     <div className="w-full max-w-5xl mt-12 bg-[#121214] border border-[#2d2d33] rounded-xl overflow-hidden shadow-2xl relative font-sans h-[550px] flex flex-col">
-      {/* Header Area (Distinct background) */}
+      {/* Header Area */}
       <div className="w-full p-4 bg-[#0a0a0c] border-b border-[#2d2d33] z-10 flex flex-col shrink-0">
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 w-full">
-           
            {/* Left Stats */}
            <div>
               <div className="flex items-end gap-3 flex-wrap">
@@ -304,7 +363,6 @@ export default function PumpfunChart() {
              </>
            ) : (
              <>
-               {/* Default Legend state when not hovering */}
                <span>O <span className="text-gray-500">-</span></span>
                <span>H <span className="text-gray-500">-</span></span>
                <span>L <span className="text-gray-500">-</span></span>
@@ -330,16 +388,20 @@ export default function PumpfunChart() {
         </div>
       </div>
 
-      {/* Footer Area (Distinct background) */}
+      {/* Footer Area */}
       <div className="w-full px-4 py-2 bg-[#0a0a0c] border-t border-[#2d2d33] z-10 flex flex-wrap justify-between items-center shrink-0 gap-4">
         
         {/* Bottom Timeframes */}
         <div className="flex gap-3 text-xs font-semibold items-center">
-           <button className="text-white hover:text-green-400 transition bg-gray-800/50 px-2 rounded py-0.5">1D</button>
-           <button className="text-gray-500 hover:text-white transition">5D</button>
-           <button className="text-gray-500 hover:text-white transition">1M</button>
-           <button className="text-gray-500 hover:text-white transition">3M</button>
-           <button className="text-gray-500 hover:text-white transition">1Y</button>
+           {['1D', '5D', '1M', '3M', '1Y'].map(tf => (
+             <button 
+               key={tf}
+               onClick={() => handleTimeframe(tf)}
+               className={`transition px-2 rounded py-0.5 ${timeframe === tf ? 'text-white bg-gray-800/50 hover:text-green-400' : 'text-gray-500 hover:text-white'}`}
+             >
+               {tf}
+             </button>
+           ))}
            <div className="w-px h-3 bg-gray-700 mx-1 hidden sm:block"></div>
            <button className="text-gray-500 hover:text-white transition flex items-center justify-center hidden sm:flex">
              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
@@ -347,11 +409,26 @@ export default function PumpfunChart() {
         </div>
         
         {/* Settings Right Icons */}
-        <div className="flex gap-3 text-[11px] font-semibold text-gray-500 items-center">
-            <button className="hover:text-white transition">%</button>
-            <button className="hover:text-white transition">log</button>
-            <button className="text-green-500 hover:text-green-400 transition">auto</button>
-            <button className="hover:text-white transition ml-2">
+        <div className="flex gap-3 text-[11px] font-semibold items-center">
+            <button 
+              onClick={togglePercent} 
+              className={`transition ${priceMode === 2 ? 'text-green-500 font-bold' : 'text-gray-500 hover:text-white'}`}
+            >
+              %
+            </button>
+            <button 
+              onClick={toggleLog} 
+              className={`transition ${priceMode === 1 ? 'text-green-500 font-bold' : 'text-gray-500 hover:text-white'}`}
+            >
+              log
+            </button>
+            <button 
+              onClick={triggerAuto} 
+              className="text-gray-500 hover:text-green-400 transition"
+            >
+              auto
+            </button>
+            <button className="text-gray-500 hover:text-white transition ml-2">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"></path><circle cx="12" cy="12" r="3"></circle></svg>
             </button>
         </div>
