@@ -14,7 +14,7 @@ const Footer = () => {
             className="rounded-full border border-mewdonRed h-10 w-10 object-cover"
             alt="Mew Donalds logo"
           />
-          <span className="font-stopbuck text-white text-xl tracking-wider">
+          <span className="font-stopbuck text-white text-h3 tracking-wider">
             {"MewDonald's"}
           </span>
         </div>
@@ -24,7 +24,7 @@ const Footer = () => {
             href={twitterLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
+            className="text-stone-400 hover:text-mewdonYellow font-mono text-body-sm uppercase transition"
           >
             Twitter/X
           </a>
@@ -32,19 +32,19 @@ const Footer = () => {
             href={telegramLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
+            className="text-stone-400 hover:text-mewdonYellow font-mono text-body-sm uppercase transition"
           >
             Telegram
           </a>
           <span
-            className="text-stone-600 font-mono text-sm uppercase cursor-not-allowed"
+            className="text-stone-600 font-mono text-body-sm uppercase cursor-not-allowed"
             title="Coming Soon"
           >
             DexScreener (Soon)
           </span>
         </div>
         
-        <div className="text-xs font-mono text-stone-600 text-center md:text-right">
+        <div className="text-micro font-mono text-stone-600 text-center md:text-right">
           <p>© {new Date().getFullYear()} {"MewDonald's"} Inc. All Rights Cooked.</p>
           <p className="mt-1">$MEWDON is a meme coin for entertainment purposes only.</p>
         </div>

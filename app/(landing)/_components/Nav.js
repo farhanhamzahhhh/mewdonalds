@@ -56,7 +56,7 @@ const Nav = () => {
             <a
               key={item.name}
               href={item.href}
-              className="transition duration-200 text-white hover:text-mewdonYellow text-sm md:text-base lg:text-lg xl:text-xl font-bold font-stopbuck tracking-wider"
+              className="transition duration-200 text-white hover:text-mewdonYellow text-body font-bold font-stopbuck tracking-wider"
             >
               {item.name}
             </a>
@@ -68,12 +68,12 @@ const Nav = () => {
           <div className="relative flex flex-col items-center">
             <button
               disabled
-              className="transition duration-200 font-stopbuck text-xs sm:text-sm md:text-base lg:text-lg rounded-xl px-2.5 py-1.5 sm:px-4 sm:py-2 font-medium text-white bg-mewdonRed border-2 border-mewdonYellow cursor-not-allowed shadow-inner text-center"
+              className="transition duration-200 font-stopbuck text-body rounded-xl px-2.5 py-1.5 sm:px-4 sm:py-2 font-medium text-white bg-mewdonRed border-2 border-mewdonYellow cursor-not-allowed shadow-inner text-center"
               title="Coming Soon"
             >
               $MEWDON
             </button>
-            <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-mewdonYellow text-black border border-black px-2 py-0.5 rounded-full text-[8px] sm:text-[9px] font-extrabold tracking-widest uppercase transform rotate-[-4deg] shadow-sm whitespace-nowrap z-10 hover:rotate-0 transition-transform">
+            <span className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 bg-mewdonYellow text-black border border-black px-2 py-0.5 rounded-full text-micro font-extrabold tracking-widest uppercase transform rotate-[-4deg] shadow-sm whitespace-nowrap z-10 hover:rotate-0 transition-transform">
               by pump.fun
             </span>
           </div>
@@ -108,7 +108,7 @@ const Nav = () => {
         }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-800">
-          <span className="font-stopbuck text-mewdonYellow text-lg sm:text-xl tracking-wider">MewDonald's</span>
+          <span className="font-stopbuck text-mewdonYellow text-h3 tracking-wider">MewDonald&apos;s</span>
           <button 
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-white hover:text-mewdonYellow transition-colors rounded-full"
@@ -126,7 +126,7 @@ const Nav = () => {
               key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className="text-white hover:text-mewdonYellow text-lg sm:text-xl font-bold font-stopbuck tracking-wider transition-colors"
+              className="text-white hover:text-mewdonYellow text-body-lg font-bold font-stopbuck tracking-wider transition-colors"
             >
               {item.name}
             </a>
