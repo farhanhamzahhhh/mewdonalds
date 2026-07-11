@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 
 const Countdown = () => {
-  // Target: July 14, 2026 at 11:00:00 AM local time (+07:00)
-  const targetDate = new Date("2026-07-14T11:00:00+07:00").getTime();
+  // Target: July 14, 2026 at 8:00:00 PM local time WIB (+07:00)
+  const targetDate = new Date("2026-07-14T20:00:00+07:00").getTime();
   
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
