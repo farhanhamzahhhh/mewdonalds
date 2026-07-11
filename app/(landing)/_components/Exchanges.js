@@ -14,7 +14,7 @@ const Exchanges = () => {
   return (
     <div id="exchanges" className="relative py-12 bg-[#15110f] border-b border-black">
       <div className="max-w-[85rem] mx-auto px-6 md:px-8 lg:px-12 xl:px-16 text-center">
-        <h2 className="font-stopbuck text-4xl text-mewdonYellow tracking-wider">
+        <h2 className="font-stopbuck text-h2 text-mewdonYellow tracking-wider">
           Partner Outlets
         </h2>
         <div className="mt-8 flex justify-center">

@@ -32,7 +32,7 @@ const Hero = () => {
         {/* Signboard bottom scrolling neon text */}
         <div className="px-4">
           <div className="w-full mt-4 bg-red-950/40 border-2 border-mewdonRed/50 rounded-xl p-2.5 text-center overflow-hidden">
-            <p className="font-stopbuck text-mewdonYellow text-xl md:text-2xl animate-pulse tracking-widest text-shadow-black">
+            <p className="font-stopbuck text-mewdonYellow text-body-lg animate-pulse tracking-widest text-shadow-black">
               🍔 NOW SERVING FRESH ON SOLANA • ZERO TAXES • LP BURNED 🍟
             </p>
           </div>
@@ -45,7 +45,7 @@ const Hero = () => {
 
       {/* Contract address receipt block */}
       <div className="mt-12 w-full max-w-xl">
-        <p className="text-center font-stopbuck text-mewdonYellow text-lg mb-2">SCAN & ORDER TICKETS HERE:</p>
+        <p className="text-center font-stopbuck text-mewdonYellow text-body-lg mb-2">SCAN & ORDER TICKETS HERE:</p>
         <ContractAddress />
       </div>
     </div>

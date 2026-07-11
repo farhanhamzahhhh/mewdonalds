@@ -5,10 +5,10 @@ const Roadmap = () => {
     <div id="drive-thru" className="relative py-20 bg-[#1c1714] border-b border-black">
       <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-16">
-          <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
+          <h2 className="font-stopbuck text-h1 text-mewdonYellow text-shadow-red tracking-wider">
             The Drive-Thru Plan
           </h2>
-          <h3 className="font-stopbuck text-2xl text-white tracking-widest mt-2">
+          <h3 className="font-stopbuck text-h3 text-white tracking-widest mt-2">
             {"MewDonald's Roadmap 🗺️"}
           </h3>
         </div>
@@ -20,7 +20,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               1
             </div>
-            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 1: Opening the Kitchen (Launch)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
@@ -36,7 +36,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               2
             </div>
-            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 2: The Drive-Thru (Momentum)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
@@ -52,7 +52,7 @@ const Roadmap = () => {
             <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
               3
             </div>
-            <h4 className="text-xl sm:text-2xl font-stopbuck text-mewdonYellow tracking-wide uppercase">
+            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
               Phase 3: Global Franchise (Community)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
@@ -64,10 +64,10 @@ const Roadmap = () => {
         </div>
 
         <div className="mt-16 text-center bg-stone-950 p-6 rounded-2xl border-2 border-mewdonYellow/50">
-          <p className="font-stopbuck text-mewdonYellow text-3xl tracking-wider text-shadow-black">
+          <p className="font-stopbuck text-mewdonYellow text-h2 tracking-wider text-shadow-black">
             🍔 LONG TERM GOAL 🍟
           </p>
-          <p className="mt-2 font-mono text-lg text-gray-300">
+          <p className="mt-2 font-mono text-body text-gray-300">
             {"Establish $MEWDON as the official currency of the internet's hungry cats."}
           </p>
         </div>

@@ -9,10 +9,10 @@ const About = () => {
 
       <div className="max-w-[85rem] px-6 md:px-8 lg:px-12 xl:px-16 py-10 mx-auto">
         <div className="text-center mb-16">
-          <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
+          <h2 className="font-stopbuck text-h1 text-mewdonYellow text-shadow-red tracking-wider">
             Our Kitchen Story
           </h2>
-          <h3 className="font-stopbuck text-2xl tracking-widest text-white mt-2">
+          <h3 className="font-stopbuck text-h3 tracking-widest text-white mt-2 px-2">
             WHO IS CHEF MEWDON? 🍳
           </h3>
         </div>
@@ -30,13 +30,13 @@ const About = () => {
           </div>
 
           <div className="space-y-6 text-gray-200">
-            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+            <p className="font-mono text-body-lg leading-relaxed text-justify">
               Meet <span className="text-mewdonYellow font-bold text-2xl">Chef Mewdon</span>, the hardest working feline in the fast-food industry. For years, he cooked countless burgers, flipped hot fries, and served shakes for greedy humans at minimum claw-wage, only to be rewarded with cheap kibble.
             </p>
-            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+            <p className="font-mono text-body-lg leading-relaxed text-justify">
               One day, Chef Mewdon decided he had enough! He knocked a tray of cups off the counter (for dominance), walked out of the kitchen, and launched his own decentralized franchise right on the <span className="bg-gradient-to-r from-[#9945FF] to-[#14F195] inline-block text-transparent bg-clip-text font-bold">Solana blockchain</span>.
             </p>
-            <p className="font-mono text-lg md:text-xl leading-relaxed text-justify">
+            <p className="font-mono text-body-lg leading-relaxed text-justify">
               Now, he is flipping <span className="text-mewdonRed font-extrabold text-2xl">$MEWDON</span> tokens instead of beef patties, building a global army of hungry cats, and making sure the liquidity is locked tighter than the restaurant&apos;s safe box!
             </p>
             
