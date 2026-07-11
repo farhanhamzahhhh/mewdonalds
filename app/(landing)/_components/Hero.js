@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import ContractAddress from "@/components/ContractAddress";
 import Countdown from "@/components/Countdown";
+import PumpfunChart from "@/components/PumpfunChart";
 
 const Hero = () => {
   return (
@@ -39,6 +40,8 @@ const Hero = () => {
       </div>
 
       <Countdown />
+
+      <PumpfunChart />
 
       {/* Contract address receipt block */}
       <div className="mt-12 w-full max-w-xl">
