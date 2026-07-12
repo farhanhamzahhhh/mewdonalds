@@ -35,7 +35,7 @@ const plans = [
 
 const FuturePlans = () => {
   return (
-    <div className="py-20 bg-[#121212] border-b border-black">
+    <div id="future-plans" className="py-20 bg-[#121212] border-b border-black">
       <div className="max-w-6xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-16">
           <h2 className="font-stopbuck text-h1 text-mewdonYellow text-shadow-red tracking-wider">

@@ -10,6 +10,7 @@ const navigation = [
   { name: "About", href: "#about" },
   { name: "Menu", href: "#menu" },
   { name: "Drive-Thru", href: "#drive-thru" },
+  { name: "Future Plans", href: "#future-plans" },
   { name: "Order Steps", href: "#order-steps" },
 ];
 
@@ -37,7 +38,8 @@ const Nav = () => {
           }`}
       >
         <div className="flex items-center justify-between py-4 px-4 sm:px-10 md:px-8 lg:px-12 xl:px-16 mx-auto max-w-screen-xl h-full">
-          <div className="flex lg:flex-1">
+          {/* Left: Logo */}
+          <div className="flex shrink-0">
             <a href="#" className="-m-1.5 p-1.5 flex items-center gap-2">
               <Image
                 src="logo-coin.jpg"
@@ -52,7 +54,8 @@ const Nav = () => {
             </a>
           </div>
 
-          <div className="hidden md:flex md:gap-x-4 lg:gap-x-8 xl:gap-x-12 cursor-pointer uppercase">
+          {/* Middle: Desktop Links (Hidden on mobile and tablet) */}
+          <div className="hidden lg:flex lg:gap-x-6 xl:gap-x-8 cursor-pointer uppercase">
             {navigation.map((item) => (
               <a
                 key={item.name}
@@ -64,13 +67,13 @@ const Nav = () => {
             ))}
           </div>
 
-          <div className="flex lg:flex-1 justify-end items-center gap-2 sm:gap-3">
-
+          {/* Right: Buy Button & Hamburger */}
+          <div className="flex shrink-0 justify-end items-center gap-2 sm:gap-3">
             <MewDon />
 
-            {/* Hamburger Icon */}
+            {/* Hamburger Icon (Visible on mobile and tablet) */}
             <button
-              className="md:hidden flex-shrink-0 p-2 text-mewdonYellow hover:text-white transition-colors ml-1"
+              className="lg:hidden flex-shrink-0 p-2 text-mewdonYellow hover:text-white transition-colors ml-1"
               onClick={() => setIsMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -80,20 +83,19 @@ const Nav = () => {
             </button>
           </div>
         </div>
-
       </nav>
 
       {/* Mobile Drawer Overlay */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 bg-black/70 z-[9998] backdrop-blur-sm md:hidden"
+          className="fixed inset-0 bg-black/70 z-[9998] backdrop-blur-sm lg:hidden"
           onClick={() => setIsMobileMenuOpen(false)}
         />
       )}
 
       {/* Mobile Drawer Panel */}
       <div
-        className={`fixed top-0 right-0 h-full w-64 sm:w-80 bg-[#121212] shadow-2xl border-l border-mewdonRed z-[9999] transform transition-transform duration-300 ease-in-out md:hidden flex flex-col ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-64 sm:w-80 bg-[#121212] shadow-2xl border-l border-mewdonRed z-[9999] transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-800">
@@ -121,8 +123,7 @@ const Nav = () => {
             </a>
           ))}
 
-
-          <div className="flex flex-col items-start gap-4 ">
+          <div className="flex flex-col items-start gap-4">
             <MewDon />
 
             <a href={telegramLink} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-12 h-12 text-2xl text-white bg-[#24A1DE] rounded-full border-2 border-mewdonYellow hover:bg-mewdonYellow hover:text-black mt-4 transition-all">
