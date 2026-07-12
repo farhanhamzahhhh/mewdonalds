@@ -12,6 +12,7 @@ const navigation = [
   { name: "Drive-Thru", href: "#drive-thru" },
   { name: "Future Plans", href: "#future-plans" },
   { name: "Order Steps", href: "#order-steps" },
+  { name: "White Paper", href: "/whitepaper", target: "_blank" },
 ];
 
 const Nav = () => {
@@ -56,7 +57,9 @@ const Nav = () => {
 
           {/* Middle: Desktop Links (Hidden on mobile and tablet) */}
           <div className="hidden lg:flex lg:gap-x-6 xl:gap-x-8 cursor-pointer uppercase">
-            {navigation.map((item) => (
+            {navigation
+              .filter((item) => item.name !== "White Paper")
+              .map((item) => (
               <a
                 key={item.name}
                 href={item.href}
@@ -116,6 +119,8 @@ const Nav = () => {
             <a
               key={item.name}
               href={item.href}
+              target={item.target || "_self"}
+              rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
               onClick={() => setIsMobileMenuOpen(false)}
               className="text-white hover:text-mewdonYellow text-body-lg font-bold font-stopbuck tracking-wider transition-colors"
             >

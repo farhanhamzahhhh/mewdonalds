@@ -39,6 +39,14 @@ const Footer = () => {
             >
               Telegram
             </a>
+            <a
+              href="/whitepaper"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-400 hover:text-mewdonYellow font-mono text-body-sm uppercase transition"
+            >
+              White Paper
+            </a>
             <span
               className="text-stone-600 font-mono text-body-sm uppercase cursor-not-allowed"
               title="Coming Soon"
