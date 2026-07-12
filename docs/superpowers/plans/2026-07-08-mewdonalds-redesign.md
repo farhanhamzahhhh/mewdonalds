@@ -21,31 +21,31 @@
 ### Task 1: Styling Configuration & Asset Preparation
 
 **Files:**
-- Create: `public/logo-coin.jpg` (copy of `public/mewdonalds-assets/mewdons.jpeg`)
-- Create: `public/hero-banner.png` (copy of `public/mewdonalds-assets/mewdon.png`)
-- Create: `public/about-chef.png` (copy of `public/mewdonalds-assets/about-chef.png`)
-- Create: `public/burger.png` (copy of `public/mewdonalds-assets/burger.png`)
-- Create: `public/fries.png` (copy of `public/mewdonalds-assets/fries.png`)
-- Create: `public/shake.png` (copy of `public/mewdonalds-assets/shake.png`)
-- Create: `public/soda.png` (copy of `public/mewdonalds-assets/soda.png`)
+- Create: `public/logo-coin.jpg` (copy of `public/mewdon-assets/mewdons.jpeg`)
+- Create: `public/hero-banner.png` (copy of `public/mewdon-assets/mewdon.png`)
+- Create: `public/about-chef.png` (copy of `public/mewdon-assets/about-chef.png`)
+- Create: `public/burger.png` (copy of `public/mewdon-assets/burger.png`)
+- Create: `public/fries.png` (copy of `public/mewdon-assets/fries.png`)
+- Create: `public/shake.png` (copy of `public/mewdon-assets/shake.png`)
+- Create: `public/soda.png` (copy of `public/mewdon-assets/soda.png`)
 - Modify: `tailwind.config.js:10-18`
 - Modify: `app/globals.css:10-57`
 
 **Interfaces:**
-- Consumes: Existing files in `public/mewdonalds-assets/`
+- Consumes: Existing files in `public/mewdon-assets/`
 - Produces: Updated Tailwind theme colors `mewdon-red`, `mewdon-yellow`, `mewdon-dark` and global class utilities for text shadows, glows, and kiosk layout.
 
 - [ ] **Step 1: Copy asset files to project public folder**
 
 Copy files using shell commands:
 ```bash
-cp public/mewdonalds-assets/mewdons.jpeg public/logo-coin.jpg
-cp public/mewdonalds-assets/mewdon.png public/hero-banner.png
-cp public/mewdonalds-assets/about-chef.png public/about-chef.png
-cp public/mewdonalds-assets/burger.png public/burger.png
-cp public/mewdonalds-assets/fries.png public/fries.png
-cp public/mewdonalds-assets/shake.png public/shake.png
-cp public/mewdonalds-assets/soda.png public/soda.png
+cp public/mewdon-assets/mewdons.jpeg public/logo-coin.jpg
+cp public/mewdon-assets/mewdon.png public/hero-banner.png
+cp public/mewdon-assets/about-chef.png public/about-chef.png
+cp public/mewdon-assets/burger.png public/burger.png
+cp public/mewdon-assets/fries.png public/fries.png
+cp public/mewdon-assets/shake.png public/shake.png
+cp public/mewdon-assets/soda.png public/soda.png
 ```
 
 - [ ] **Step 2: Modify tailwind.config.js**
@@ -114,7 +114,7 @@ Expected: Successful compilation without CSS errors.
 
 ```bash
 git add public/ tailwind.config.js app/globals.css
-git commit -m "style: configure mewdonalds colors, assets, and text shadow utilities"
+git commit -m "style: configure mewdon colors, assets, and text shadow utilities"
 ```
 
 ---
@@ -170,7 +170,7 @@ Update render:
               alt="logo coin"
             />
             <span className="font-stopbuck text-mewdonYellow text-2xl hidden sm:inline tracking-wider">
-              MewDonald's
+              Mewdon
             </span>
           </a>
         </div>
@@ -311,7 +311,7 @@ const ContractAddress = () => {
   return (
     <div className="relative bg-white text-black p-4 rounded-lg shadow-lg border-t-8 border-dashed border-mewdonRed font-mono text-sm sm:text-base border border-gray-300">
       <div className="text-center border-b border-dashed border-gray-400 pb-2 mb-2">
-        <h4 className="font-bold tracking-widest uppercase">MEWDONALD'S INC.</h4>
+        <h4 className="font-bold tracking-widest uppercase">MEWDON INC.</h4>
         <p className="text-xs">ORDER #777 - SOLANA CHAIN</p>
       </div>
       
@@ -489,7 +489,7 @@ const Tokenomics = () => {
       <div className="max-w-[85rem] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-stopbuck text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
-            MewDonald's Menu
+            Mewdon Menu
           </h2>
           <h3 className="font-stopbuck text-2xl text-white tracking-widest mt-2">
             TASTY RECIPES & TOKEN DETAILS 🥤
@@ -723,7 +723,7 @@ const Roadmap = () => {
             The Drive-Thru Plan
           </h2>
           <h3 className="font-stopbuck text-2xl text-white tracking-widest mt-2">
-            MewDonald's Roadmap 🗺️
+            Mewdon Roadmap 🗺️
           </h3>
         </div>
 
@@ -756,7 +756,7 @@ const Roadmap = () => {
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
               <li>Verify on DexScreener/DEXTools</li>
               <li>Update logo, social links, and project description</li>
-              <li>Launch meme contests rewarding the best "MewDonald’s Order" edits</li>
+              <li>Launch meme contests rewarding the best "Mewdon Order" edits</li>
               <li>Reach the Top 10 on the pump.fun trending page</li>
             </ul>
           </div>
@@ -770,7 +770,7 @@ const Roadmap = () => {
               Phase 3: Global Franchise (Community)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
-              <li>Release the "MewDonald’s Employee Handbook" (funny parody PDF/website)</li>
+              <li>Release the "Mewdon Employee Handbook" (funny parody PDF/website)</li>
               <li>Organize coordinated "Drive-Thru" community raids</li>
               <li>Flood influencer posts with $MEWDON memes</li>
             </ul>
@@ -813,13 +813,13 @@ const Footer = () => {
             alt="Mew Donalds logo"
           />
           <span className="font-stopbuck text-white text-xl tracking-wider">
-            MewDonald's
+            Mewdon
           </span>
         </div>
 
         <div className="flex gap-6">
           <a
-            href="https://x.com/mewdonalds"
+            href="https://x.com/mewdon"
             target="_blank"
             rel="noopener noreferrer"
             className="text-stone-400 hover:text-mewdonYellow font-mono text-sm uppercase transition"
@@ -843,7 +843,7 @@ const Footer = () => {
         </div>
         
         <div className="text-xs font-mono text-stone-600 text-center md:text-right">
-          <p>© {new Date().getFullYear()} MewDonald's Inc. All Rights Cooked.</p>
+          <p>© {new Date().getFullYear()} Mewdon Inc. All Rights Cooked.</p>
           <p className="mt-1">$MEWDON is a meme coin for entertainment purposes only.</p>
         </div>
       </div>

@@ -16,7 +16,7 @@ Redesign the existing landing page template (originally for $DUIS) to support th
 
 ## Asset Requirements
 
-### Existing Assets (Available in `public/mewdonalds-assets/`)
+### Existing Assets (Available in `public/mewdon-assets/`)
 *   `mewdons.jpeg`: Round logo coin badge containing Chef Mewdon. Will be copied/linked to `public/logo-coin.png` and used across the site.
 *   `mewdon.png`: Wood background banner with Chef Mewdon badge, french fries, and menu sign. Used as the main visual banner in the Hero section.
 

@@ -34,7 +34,7 @@ const Tokenomics = () => {
       <div className="max-w-[85rem] mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center mb-16">
           <h2 className="font-stopbuck text-4xl sm:text-5xl md:text-6xl text-mewdonYellow text-shadow-red tracking-wider">
-            MewDonald&apos;s Menu
+            Mewdon Menu
           </h2>
           <h3 className="font-stopbuck text-lg sm:text-xl md:text-2xl text-white tracking-widest mt-2 px-2">
             TASTY RECIPES & TOKEN DETAILS 🥤

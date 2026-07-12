@@ -29,7 +29,7 @@ const plans = [
   {
     icon: "📖",
     title: "Lore Expansion",
-    description: 'Release "MewDonald\'s Universe" comics, animated shorts, or a simple story series (Grumpy Cat CEO conquering the fast-food world). Build a wiki or Notion page for lore.'
+    description: 'Release "Mewdon Universe" comics, animated shorts, or a simple story series (Grumpy Cat CEO conquering the fast-food world). Build a wiki or Notion page for lore.'
   }
 ];
 

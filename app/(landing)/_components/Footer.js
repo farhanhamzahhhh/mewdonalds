@@ -18,7 +18,7 @@ const Footer = () => {
               alt="Mew Donalds logo"
             />
             <span className="font-stopbuck text-white text-h3 tracking-wider">
-              {"MewDonald's"}
+              {"Mewdon"}
             </span>
           </div>
 
@@ -62,7 +62,7 @@ const Footer = () => {
         {/* Bottom Row: Disclaimer */}
         <div className="text-micro font-mono text-stone-600 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-center md:text-left shrink-0">
-            © {new Date().getFullYear()} {"MewDonald's"} Inc. All Rights Cooked.
+            © {new Date().getFullYear()} {"Mewdon"} Inc. All Rights Cooked.
           </p>
           <p className="text-center md:text-right max-w-xl">
             $MEWDON is a meme coin for entertainment purposes only. This project is a parody and is not affiliated with McDonald&apos;s Corporation.

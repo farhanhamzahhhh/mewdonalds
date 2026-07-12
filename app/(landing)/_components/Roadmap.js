@@ -9,7 +9,7 @@ const Roadmap = () => {
             The Drive-Thru Plan
           </h2>
           <h3 className="font-stopbuck text-h3 text-white tracking-widest mt-2">
-            {"MewDonald's Roadmap 🗺️"}
+            {"Mewdon Roadmap 🗺️"}
           </h3>
         </div>
 
@@ -42,7 +42,7 @@ const Roadmap = () => {
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
               <li>Verify on DexScreener/DEXTools</li>
               <li>Update logo, social links, and project description</li>
-              <li>{"Launch meme contests rewarding the best \"MewDonald's Order\" edits"}</li>
+              <li>{"Launch meme contests rewarding the best \"Mewdon Order\" edits"}</li>
               <li>Reach the Top 10 on the pump.fun trending page</li>
             </ul>
           </div>
@@ -56,7 +56,7 @@ const Roadmap = () => {
               Phase 3: Global Franchise (Community)
             </h4>
             <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
-              <li>{"Release the \"MewDonald's Employee Handbook\" (funny parody PDF/website)"}</li>
+              <li>{"Release the \"Mewdon Employee Handbook\" (funny parody PDF/website)"}</li>
               <li>{"Organize coordinated \"Drive-Thru\" community raids"}</li>
               <li>Flood influencer posts with $MEWDON memes</li>
             </ul>

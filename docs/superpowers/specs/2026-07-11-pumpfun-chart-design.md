@@ -1,7 +1,7 @@
 # Pump.fun Candlestick Chart Component Design
 
 ## Overview
-Add a live candlestick chart to the landing page of the MewDonalds website, specifically placed underneath the Countdown timer in the Hero section. Since the actual project token has not launched yet, the chart will use a dummy token's contract address to fetch and display real data for testing purposes.
+Add a live candlestick chart to the landing page of the Mewdon website, specifically placed underneath the Countdown timer in the Hero section. Since the actual project token has not launched yet, the chart will use a dummy token's contract address to fetch and display real data for testing purposes.
 
 ## Requirements
 - Render an OHLCV candlestick chart using `lightweight-charts`.

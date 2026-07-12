@@ -34,7 +34,7 @@ const ContractAddress = () => {
   return (
     <div className="relative bg-white text-black p-4 sm:p-5 rounded-lg shadow-lg border-t-8 border-dashed border-mewdonRed font-sans text-sm sm:text-base border border-gray-300">
       <div className="text-center border-b border-dashed border-gray-400 pb-2.5 mb-3">
-        <h4 className="font-extrabold tracking-widest uppercase">MEWDONALD&apos;S INC.</h4>
+        <h4 className="font-extrabold tracking-widest uppercase">mewdon INC.</h4>
         <p className="text-xs font-mono text-gray-500 mt-0.5">ORDER #777 - SOLANA CHAIN</p>
       </div>
       

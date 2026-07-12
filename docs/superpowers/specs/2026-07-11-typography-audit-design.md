@@ -1,7 +1,7 @@
 # Typography Audit & Standardization Design
 
 ## Goal
-Make font sizes across the Mewdonalds web app uniform, responsive (specifically smaller on mobile), and easy to maintain by moving away from inline Tailwind typography classes to semantic component classes.
+Make font sizes across the Mewdon web app uniform, responsive (specifically smaller on mobile), and easy to maintain by moving away from inline Tailwind typography classes to semantic component classes.
 
 ## Architecture & Components
 

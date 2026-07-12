@@ -50,7 +50,7 @@ const Nav = () => {
                 alt="logo coin"
               />
               <span className="font-stopbuck text-mewdonYellow text-2xl hidden xl:inline tracking-wider">
-                MewDonald&apos;s
+                Mewdon
               </span>
             </a>
           </div>
@@ -102,7 +102,7 @@ const Nav = () => {
           }`}
       >
         <div className="flex items-center justify-between p-4 border-b border-gray-800">
-          <span className="font-stopbuck text-mewdonYellow text-h3 tracking-wider">MewDonald&apos;s</span>
+          <span className="font-stopbuck text-mewdonYellow text-h3 tracking-wider">Mewdon</span>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-white hover:text-mewdonYellow transition-colors rounded-full"

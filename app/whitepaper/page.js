@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 
 export const metadata = {
-  title: 'White Paper – MewDonald\'s ($MEWDON)',
-  description: 'MewDonald\'s ($MEWDON) is a meme coin project themed around a fast-food cooking cat, built on the Solana blockchain. Read our whitepaper to learn about the project, tokenomics, roadmap, and more.',
-  keywords: 'MewDonald, $MEWDON, Meme Coin, Solana, Whitepaper, Chef Mewdon, Crypto',
+  title: 'White Paper – Mewdon ($MEWDON)',
+  description: 'Mewdon ($MEWDON) is a meme coin project themed around a fast-food cooking cat, built on the Solana blockchain. Read our whitepaper to learn about the project, tokenomics, roadmap, and more.',
+  keywords: 'Mewdon, $MEWDON, Meme Coin, Solana, Whitepaper, Chef Mewdon, Crypto',
 };
 
 export default function WhitepaperPage() {
@@ -12,7 +12,7 @@ export default function WhitepaperPage() {
     <div className="min-h-screen bg-white text-black py-16 px-4 sm:px-6 lg:px-8 font-sans">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">White Paper – MewDonald&apos;s ($MEWDON)</h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4">White Paper – Mewdon ($MEWDON)</h1>
           <p className="text-xl text-gray-600 font-medium">Fast Food Cooking Cat Meme Coin on Solana Blockchain | Version 1.0</p>
           <p className="text-md text-gray-500 mt-2">Based on official website: <a href="https://mewdon.site/" className="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">https://mewdon.site/</a> | July 2026</p>
         </div>
@@ -21,14 +21,14 @@ export default function WhitepaperPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">Executive Summary</h2>
             <p>
-              MewDonald&apos;s ($MEWDON) is a meme coin project themed around a fast-food cooking cat, built on the Solana blockchain. The project tells the story of Chef Mewdon — a hardworking feline who quits his traditional job and launches his own decentralized franchise on blockchain. He now flips $MEWDON tokens instead of burgers. Key features include 0% transaction tax and fully burned liquidity pool (LP). The token was launched via pump.fun with plans to graduate to Raydium. Mewdon combines humor, strong community engagement, and a clear development roadmap that includes mini-games, merchandise, partnerships, CEX listings, and deep lore expansion. Long-term vision: Establish $MEWDON as the official currency of the internet&rsquo;s hungry cats.
+              Mewdon ($MEWDON) is a meme coin project themed around a fast-food cooking cat, built on the Solana blockchain. The project tells the story of Chef Mewdon — a hardworking feline who quits his traditional job and launches his own decentralized franchise on blockchain. He now flips $MEWDON tokens instead of burgers. Key features include 0% transaction tax and fully burned liquidity pool (LP). The token was launched via pump.fun with plans to graduate to Raydium. Mewdon combines humor, strong community engagement, and a clear development roadmap that includes mini-games, merchandise, partnerships, CEX listings, and deep lore expansion. Long-term vision: Establish $MEWDON as the official currency of the internet&rsquo;s hungry cats.
             </p>
           </section>
 
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">1. Introduction</h2>
             <p>
-              The meme coin space on Solana is highly competitive and often dominated by short-lived hype projects. Many tokens lack compelling narratives, transparency, or long-term plans. MewDonald&apos;s differentiates itself by creating a fun, relatable story around a cat chef while maintaining strong technical foundations: zero taxes, burned liquidity, and community-driven growth on the fast and low-cost Solana blockchain.
+              The meme coin space on Solana is highly competitive and often dominated by short-lived hype projects. Many tokens lack compelling narratives, transparency, or long-term plans. Mewdon differentiates itself by creating a fun, relatable story around a cat chef while maintaining strong technical foundations: zero taxes, burned liquidity, and community-driven growth on the fast and low-cost Solana blockchain.
             </p>
           </section>
 
@@ -47,7 +47,7 @@ export default function WhitepaperPage() {
           </section>
 
           <section>
-            <h2 className="text-3xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">4. Solution: MewDonald&apos;s ($MEWDON) on Solana</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">4. Solution: Mewdon ($MEWDON) on Solana</h2>
             <h3 className="text-xl font-semibold text-gray-900 mb-2">Core Features:</h3>
             <ul className="list-disc pl-6 mb-4 space-y-2">
               <li><strong>Blockchain:</strong> Solana (high speed, low fees)</li>
@@ -117,7 +117,7 @@ export default function WhitepaperPage() {
           <section>
             <h2 className="text-3xl font-bold text-gray-900 mb-4 pb-2 border-b border-gray-200">10. Conclusion</h2>
             <p className="mb-6">
-              MewDonald&apos;s ($MEWDON) is more than a typical meme coin. It is a story, a community, and a movement wrapped in humorous fast-food cat branding. With strong technical foundations (0% tax + burned LP on Solana) and a clear roadmap toward utilities and sustained engagement, Mewdon has the potential to become a lasting and evolving project in the Solana ecosystem.
+              Mewdon ($MEWDON) is more than a typical meme coin. It is a story, a community, and a movement wrapped in humorous fast-food cat branding. With strong technical foundations (0% tax + burned LP on Solana) and a clear roadmap toward utilities and sustained engagement, Mewdon has the potential to become a lasting and evolving project in the Solana ecosystem.
             </p>
             
             <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 mt-8">
@@ -130,8 +130,8 @@ export default function WhitepaperPage() {
 
         <div className="mt-16 flex justify-center border-t border-gray-200 pt-10">
           <a 
-            href="/MewDonalds_Whitepaper_Full_260712_180802.pdf" 
-            download="MewDonalds_Whitepaper_Full_260712_180802.pdf"
+            href="/Mewdon_Whitepaper_Full_260712_180802.pdf" 
+            download="Mewdon_Whitepaper_Full_260712_180802.pdf"
             className="inline-flex items-center px-8 py-4 text-lg font-bold text-white bg-red-600 hover:bg-red-700 rounded-full shadow-lg transition-transform transform hover:-translate-y-1"
           >
             <svg className="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
