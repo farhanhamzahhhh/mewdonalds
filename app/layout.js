@@ -26,7 +26,7 @@ export const metadata = {
     title: "Mewdon ($MEWDON) - Fast Food Cooking Cat on Solana",
     description: "Meet Chef Mewdon at Mewdon ($MEWDON), the premier fast-food cooking cat meme coin on Solana. Zero taxes, LP burned, and serving fresh daily!",
     images: ["/logo-coin.jpg"],
-    creator: "@mewdon",
+    creator: "@mewdonalds",
   },
   robots: {
     index: true,
