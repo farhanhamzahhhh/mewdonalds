@@ -47,12 +47,14 @@ const Footer = () => {
             >
               White Paper
             </a>
-            <span
-              className="text-stone-600 font-mono text-body-sm uppercase cursor-not-allowed"
-              title="Coming Soon"
+            <a
+              href={dexscreenerLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-stone-400 hover:text-mewdonYellow font-mono text-body-sm uppercase transition"
             >
-              DexScreener (Soon)
-            </span>
+              DexScreener
+            </a>
           </div>
         </div>
 

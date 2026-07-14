@@ -39,9 +39,9 @@ const Hero = () => {
         </div>
       </div>
 
-      <Countdown />
+      {/* <Countdown /> */}
 
-      {/* <PumpfunChart /> */}
+      <PumpfunChart />
 
       {/* Contract address receipt block */}
       <div className="mt-12 w-full max-w-xl">

@@ -145,7 +145,7 @@ export default function PumpfunChart() {
         }
 
         // Hardcode pool address to save 1 API call per timeframe click
-        const POOL_ADDRESS = "3KFCgJ5R3zshW8hTDbzjSrrKSRYmKvsMfhc4Vo4iddxD";
+        const POOL_ADDRESS = "HHqwzt38BZ1m145SHqAmAwATYbtEAC99oeBF6eg29EEH";
 
         let endpoint = "hour?aggregate=1";
         if (candleInterval === "1m") endpoint = "minute?aggregate=1";

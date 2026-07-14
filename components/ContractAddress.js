@@ -50,7 +50,7 @@ const ContractAddress = () => {
           <span className="text-[10px] sm:text-xs block text-gray-500 font-bold tracking-wider">TAX: 0% | SLIPPAGE: AUTO</span>
           <span className="font-sans font-black text-mewdonRed text-sm sm:text-base">
             {copyStatus === "copied"
-              ? "COPIED TO DOMPET! 🍔"
+              ? "COPIED TO CLIPBOARD! 🍔"
               : copyStatus === "failed"
               ? "FAILED TO COPY! ❌"
               : "PENDING RECEIPT..."}
