@@ -31,6 +31,20 @@ const Nav = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <>
       <nav
@@ -101,7 +115,7 @@ const Nav = () => {
         className={`fixed top-0 right-0 h-full w-64 sm:w-80 bg-[#121212] shadow-2xl border-l border-mewdonRed z-[9999] transform transition-transform duration-300 ease-in-out lg:hidden flex flex-col ${isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-gray-800">
+        <div className="flex items-center justify-between p-4 border-b border-gray-800 shrink-0">
           <span className="font-stopbuck text-mewdonYellow text-h3 tracking-wider">Mewdon</span>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
@@ -114,7 +128,7 @@ const Nav = () => {
           </button>
         </div>
 
-        <div className="flex flex-col gap-6 px-6 pt-8">
+        <div className="flex flex-col gap-6 px-6 py-8 overflow-y-auto flex-1">
           {navigation.map((item) => (
             <a
               key={item.name}
