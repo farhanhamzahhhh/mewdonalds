@@ -15,7 +15,7 @@ export const metadata = {
     siteName: "PeciCatCoin",
     images: [
       {
-        url: "/si-c.jpg",
+        url: "/si-c.jpeg",
         width: 1024,
         height: 1024,
         alt: "PeciCatCoin ($PCC) Mascot",
@@ -28,7 +28,7 @@ export const metadata = {
     card: "summary",
     title: "PeciCatCoin ($PCC) - Building Culture, Not Just Hype",
     description: "PeciCatCoin ($PCC) stands as a symbol of patience, discipline, and long-term conviction.",
-    images: ["/si-c.jpg"],
+    images: ["/si-c.jpeg"],
     creator: "@pecicatcoin",
   },
   robots: {

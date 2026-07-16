@@ -55,7 +55,7 @@ const Nav = () => {
             <a href="#" className="flex items-center gap-3">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-pccGold/30 glow-gold">
                 <Image
-                  src="/si-c.jpg"
+                  src="/si-c.jpeg"
                   fill
                   className="object-cover"
                   alt="PeciCatCoin ($PCC) Mascot"
