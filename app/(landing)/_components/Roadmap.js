@@ -1,75 +1,76 @@
 import React from "react";
 
 const Roadmap = () => {
+  const phases = [
+    {
+      title: "Phase 1 — Foundation",
+      items: [
+        "Launch on Robinhood Chain",
+        "Fair Launch",
+        "DAO Governance Activation",
+      ],
+    },
+    {
+      title: "Phase 2 — Community Impact",
+      items: [
+        "Launch The Sanctuary Fund",
+        "Partnerships with Animal Shelters",
+        "First Community Donation Campaign",
+      ],
+    },
+    {
+      title: "Phase 3 — Ecosystem Expansion",
+      items: [
+        "Launch PeciCares Merchandise",
+        "Proof of Contribution Integration",
+        "Community Reward Programs",
+      ],
+    },
+    {
+      title: "Phase 4 — Financial Growth",
+      items: [
+        "DeFi Integration",
+        "Tier-1 CEX Expansion",
+        "Cross-Chain Compatibility",
+      ],
+    },
+    {
+      title: "Phase 5 — Global Vision",
+      items: [
+        "Establish the Global Peci Facility",
+        "Global Ambassador Program",
+        "Worldwide Community Expansion",
+      ],
+    },
+  ];
+
   return (
-    <div id="drive-thru" className="relative py-20 bg-[#1c1714] border-b border-black">
-      <div className="max-w-4xl mx-auto px-6 md:px-8 lg:px-12 xl:px-16">
-        <div className="text-center mb-16">
-          <h2 className="font-stopbuck text-h1 text-mewdonYellow text-shadow-red tracking-wider">
-            The Drive-Thru Plan
+    <div id="roadmap" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
+      <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
+          <h2 className="text-h2 text-pccCream font-bold mb-4">
+            Roadmap
           </h2>
-          <h3 className="font-stopbuck text-h3 text-white tracking-widest mt-2">
-            {"Mewdon Roadmap 🗺️"}
-          </h3>
+          <p className="text-body-lg text-pccCream/70 font-light">
+            Strategic Vision
+          </p>
         </div>
 
-        {/* Vertical Timeline */}
-        <div className="relative border-l-4 border-mewdonRed ml-4 md:ml-32 pl-8 space-y-12">
-          {/* Phase 1 */}
-          <div className="relative">
-            <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
-              1
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {phases.map((phase, index) => (
+            <div key={index} className="glass-panel p-8 rounded-2xl border border-[#222] relative overflow-hidden group">
+              <div className="absolute top-0 left-0 w-full h-1 bg-pccGold opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <h3 className="text-xl font-bold text-pccGold mb-6">{phase.title}</h3>
+              <ul className="space-y-4">
+                {phase.items.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <span className="text-pccGold mt-1">✓</span>
+                    <span className="text-pccCream/80">{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
-              Phase 1: Opening the Kitchen (Launch)
-            </h4>
-            <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
-              <li>Deploy on pump.fun</li>
-              <li>Aggressive shilling on X (Twitter) with nonstop fast-food parody memes</li>
-              <li>Build community hype and push to hit the bonding curve limit ASAP</li>
-              <li>Graduate to Raydium</li>
-            </ul>
-          </div>
-
-          {/* Phase 2 */}
-          <div className="relative">
-            <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
-              2
-            </div>
-            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
-              Phase 2: The Drive-Thru (Momentum)
-            </h4>
-            <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
-              <li>Verify on DexScreener/DEXTools</li>
-              <li>Update logo, social links, and project description</li>
-              <li>{"Launch meme contests rewarding the best \"Mewdon Order\" edits"}</li>
-              <li>Reach the Top 10 on the pump.fun trending page</li>
-            </ul>
-          </div>
-
-          {/* Phase 3 */}
-          <div className="relative">
-            <div className="absolute -left-[42px] top-1 bg-mewdonYellow border-4 border-black rounded-full w-8 h-8 flex justify-center items-center font-bold text-black font-stopbuck">
-              3
-            </div>
-            <h4 className="text-h3 font-stopbuck text-mewdonYellow tracking-wide uppercase">
-              Phase 3: Global Franchise (Community)
-            </h4>
-            <ul className="mt-2 list-disc list-inside font-mono text-gray-300 space-y-1">
-              <li>{"Release the \"Mewdon Employee Handbook\" (funny parody PDF/website)"}</li>
-              <li>{"Organize coordinated \"Drive-Thru\" community raids"}</li>
-              <li>Flood influencer posts with $MEWDON memes</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-16 text-center bg-stone-950 p-6 rounded-2xl border-2 border-mewdonYellow/50">
-          <p className="font-stopbuck text-mewdonYellow text-h2 tracking-wider text-shadow-black">
-            🍔 LONG TERM GOAL 🍟
-          </p>
-          <p className="mt-2 font-mono text-body text-gray-300">
-            {"Establish $MEWDON as the official currency of the internet's hungry cats."}
-          </p>
+          ))}
         </div>
       </div>
     </div>

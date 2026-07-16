@@ -4,27 +4,22 @@
 
 @layer components {
   /* Headings */
-  .text-h1 { @apply text-4xl sm:text-5xl md:text-6xl; }
-  .text-h2 { @apply text-3xl sm:text-4xl md:text-5xl; }
-  .text-h3 { @apply text-xl sm:text-2xl md:text-3xl; }
+  .text-h1 { @apply text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight; }
+  .text-h2 { @apply text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight; }
+  .text-h3 { @apply text-xl sm:text-2xl md:text-3xl font-medium; }
   
   /* Body Text */
-  .text-body-lg { @apply text-lg sm:text-xl md:text-2xl; }
-  .text-body { @apply text-base sm:text-lg md:text-xl; }
-  .text-body-sm { @apply text-sm sm:text-base md:text-lg; }
+  .text-body-lg { @apply text-lg sm:text-xl md:text-2xl leading-relaxed; }
+  .text-body { @apply text-base sm:text-lg md:text-xl leading-relaxed; }
+  .text-body-sm { @apply text-sm sm:text-base md:text-lg leading-relaxed; }
   
   /* Micro Text */
-  .text-micro { @apply text-[8px] sm:text-[10px] md:text-xs; }
-}
-
-@font-face {
-  font-family: "Stopbuck";
-  src: url("./fonts/Stopbuck.ttf");
+  .text-micro { @apply text-[10px] sm:text-xs md:text-sm; }
 }
 
 :root {
-  --background: #121212;
-  --foreground: #ffffff;
+  --background: #0B0B0B;
+  --foreground: #FFFFFF;
 }
 
 html {
@@ -38,46 +33,56 @@ body {
   background: var(--background);
 }
 
-.text-shadow {
-  text-shadow: 4px 0 #201a17, -4px 0 #201a17, 0 4px #201a17, 0 -4px #201a17,
-    4px 4px #201a17, -4px -4px #201a17, -4px 4px #201a17, 4px -4px #201a17;
+.text-gradient-gold {
+  background: linear-gradient(90deg, #D4AF37 0%, #F5F1E7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
-.text-shadow-red {
-  text-shadow: 4px 0 #db0007, -4px 0 #db0007, 0 4px #db0007, 0 -4px #db0007,
-    4px 4px #db0007, -4px -4px #db0007, -4px 4px #db0007, 4px -4px #db0007;
+.glow-gold {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.3);
 }
 
-.text-shadow-yellow {
-  text-shadow: 4px 0 #ffbc0d, -4px 0 #ffbc0d, 0 4px #ffbc0d, 0 -4px #ffbc0d,
-    4px 4px #ffbc0d, -4px -4px #ffbc0d, -4px 4px #ffbc0d, 4px -4px #ffbc0d;
+.glow-gold-hover:hover {
+  box-shadow: 0 0 35px rgba(212, 175, 55, 0.5);
 }
 
-.text-shadow-black {
-  text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000,
-    3px 3px #000, -3px -3px #000, -3px 3px #000, 3px -3px #000;
+.border-gradient {
+  border: 1px solid rgba(212, 175, 55, 0.3);
 }
 
-.glow-yellow {
-  box-shadow: 0 0 15px rgba(255, 188, 13, 0.4);
+.glass-panel {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.glow-red {
-  box-shadow: 0 0 15px rgba(219, 0, 7, 0.4);
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
 }
 
-.menu-border {
-  border: 4px solid #000;
-  box-shadow: 5px 5px 0px #db0007;
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }
 
-.cloud {
-  height: 180px; /* control the size */
-  aspect-ratio: 1.8;
-  --g: radial-gradient(50% 50%, #000 98%, #0000) no-repeat;
-  --s: radial-gradient(70% 70%, #000 98%, #0000) no-repeat;
-  mask: var(--g) 100% 100%/30% 60%, var(--g) 70% 0/50% 100%,
-    var(--g) 0 100%/36% 68%, var(--g) 27% 18%/26% 40%,
-    linear-gradient(#000 0 0) bottom/67% 58% no-repeat;
-  background: #e4e0e1;
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.05; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.1; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 8s ease-in-out infinite;
 }

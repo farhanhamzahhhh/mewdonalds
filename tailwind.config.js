@@ -10,12 +10,13 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        mewdonRed: "#db0007",
-        mewdonYellow: "#ffbc0d",
-        mewdonDark: "#121212",
+        pccBrown: "#4A3525",
+        pccCream: "#F5F1E7",
+        pccBlack: "#0B0B0B",
+        pccGold: "#D4AF37",
       },
       fontFamily: {
-        stopbuck: ["Stopbuck", "sans-serif"],
+        sans: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
