@@ -45,15 +45,15 @@ const Nav = () => {
         aria-label="Global"
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "h-20 bg-[#0B0B0B]/95 shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-[#222]"
-            : "h-24 bg-transparent"
+            ? "h-14 md:h-20 bg-[#0B0B0B]/95 shadow-[0_4px_30px_rgba(0,0,0,0.5)] border-b border-[#222]"
+            : "h-16 md:h-24 bg-transparent"
         }`}
       >
         <div className="flex items-center justify-between px-4 md:px-6 lg:px-12 mx-auto max-w-screen-2xl h-full">
           {/* Logo */}
           <div className="flex shrink-0">
             <a href="#" className="flex items-center gap-3">
-              <div className="relative w-12 h-12 rounded-full overflow-hidden border border-pccGold/30 glow-gold">
+              <div className="relative w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border border-pccGold/30 glow-gold">
                 <Image
                   src="/si-c.jpeg"
                   fill
@@ -113,7 +113,7 @@ const Nav = () => {
             </div>
 
             <button
-              className="lg:hidden p-2 -mr-2 text-pccCream/80 hover:text-pccGold transition-colors"
+              className="lg:hidden p-1 text-pccCream/80 hover:text-pccGold transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
