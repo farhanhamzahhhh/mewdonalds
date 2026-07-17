@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Philosophy = () => {
   return (
-    <div id="philosophy" className="relative py-24 bg-[#0B0B0B] overflow-hidden border-t border-[#222]">
+    <section id="philosophy" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
       <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ const Philosophy = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-20 max-w-3xl mx-auto"
         >
-          <h2 className="text-h2 text-pccCream mb-6 font-bold">
+          <h2 className="text-h2 text-pccCream mb-6 font-bold font-serif">
             Why <span className="text-pccGold">$PCC?</span>
           </h2>
           <p className="text-body-lg text-pccCream/80 leading-relaxed font-light">
@@ -142,7 +142,7 @@ const Philosophy = () => {
           </p>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

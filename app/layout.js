@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata = {
   metadataBase: new URL("https://pecicatcoin.com"),
@@ -42,8 +43,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`scroll-smooth scroll-pt-24 ${inter.variable}`}>
-      <body className="font-sans antialiased">{children}</body>
+    <html lang="en" className={`scroll-smooth scroll-pt-24 ${inter.variable} ${playfair.variable}`}>
+      <body className="font-sans antialiased bg-[#0F0C09] text-white selection:bg-pccGold selection:text-[#0B0B0B] relative">
+        <div className="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay z-50 bg-[url('/noise.svg')]"></div>
+        {children}
+      </body>
     </html>
   );
 }

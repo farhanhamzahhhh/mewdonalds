@@ -3,10 +3,10 @@ import Image from "next/image";
 
 const Mission = () => {
   return (
-    <div id="sanctuary" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
+    <section id="sanctuary" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
       <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-h2 text-pccCream font-bold mb-4">
+          <h2 className="text-h2 text-pccCream font-bold mb-4 font-serif">
             Mission — Beyond the Digital World
           </h2>
           <p className="text-body-lg text-pccCream/70 font-light">
@@ -53,7 +53,7 @@ const Mission = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

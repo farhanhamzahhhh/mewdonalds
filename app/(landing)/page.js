@@ -1,13 +1,13 @@
-import Header from "./_components/Header";
-import Nav from "./_components/Nav";
-import Marquee from "./_components/Marquee";
-import Hero from "./_components/Hero";
-import Philosophy from "./_components/Philosophy";
-import Tokenomics from "./_components/Tokenomics";
-import HowToBuy from "./_components/HowToBuy";
-import Mission from "./_components/Mission";
-import Roadmap from "./_components/Roadmap";
-import Footer from "./_components/Footer";
+import Header from "@/components/Header";
+import Nav from "@/components/Nav";
+import Marquee from "@/components/Marquee";
+import Hero from "@/components/Hero";
+import Philosophy from "@/components/Philosophy";
+import Tokenomics from "@/components/Tokenomics";
+import HowToBuy from "@/components/HowToBuy";
+import Mission from "@/components/Mission";
+import Roadmap from "@/components/Roadmap";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (

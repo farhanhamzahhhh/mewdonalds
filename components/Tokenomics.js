@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Tokenomics = () => {
   return (
-    <div id="tokenomics" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
+    <section id="tokenomics" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
       <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -15,7 +15,7 @@ const Tokenomics = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-h2 text-pccCream font-bold mb-4">
+          <h2 className="text-h2 text-pccCream font-bold mb-4 font-serif">
             Tokenomics
           </h2>
           <p className="text-body-lg text-pccCream/70 font-light">
@@ -169,7 +169,7 @@ const Tokenomics = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

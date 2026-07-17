@@ -61,7 +61,7 @@ const Nav = () => {
                   alt="PeciCatCoin ($PCC) Mascot"
                 />
               </div>
-              <span className="font-sans font-bold text-pccCream text-xl tracking-wide hidden sm:block">
+              <span className="font-serif font-bold text-pccCream text-2xl tracking-wide hidden sm:block">
                 PeciCatCoin
               </span>
             </a>
@@ -138,7 +138,7 @@ const Nav = () => {
         }`}
       >
         <div className="flex items-center justify-between p-6 border-b border-[#222]">
-          <span className="font-sans font-bold text-pccCream text-lg tracking-wide">Menu</span>
+          <span className="font-serif font-bold text-pccCream text-xl tracking-wide">Menu</span>
           <button
             onClick={() => setIsMobileMenuOpen(false)}
             className="p-2 text-pccCream/80 hover:text-pccGold transition-colors"

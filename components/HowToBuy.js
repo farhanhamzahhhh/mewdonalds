@@ -3,6 +3,8 @@
 import React from "react";
 import { raydiumLink, contractAddress } from "@/constants";
 import { motion } from "framer-motion";
+import Button from "./Button";
+import ClipboardCopy from "./ClipboardCopy";
 
 const HowToBuy = () => {
   const steps = [
@@ -29,7 +31,7 @@ const HowToBuy = () => {
   ];
 
   return (
-    <div id="how-to-buy" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
+    <section id="how-to-buy" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
       <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -38,7 +40,7 @@ const HowToBuy = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-h2 text-pccCream font-bold mb-4">
+          <h2 className="text-h2 text-pccCream font-bold mb-4 font-serif">
             How to Buy <span className="text-pccGold">$PCC</span>
           </h2>
           <p className="text-body-lg text-pccCream/70 font-light">
@@ -78,22 +80,16 @@ const HowToBuy = () => {
         >
           <h3 className="text-xl text-pccCream font-semibold mb-6">Ready to become a Regular?</h3>
           <div className="w-full flex flex-col sm:flex-row items-center gap-4">
-            <a 
-              href={raydiumLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-pccGold text-[#0B0B0B] font-bold uppercase tracking-wider rounded-lg hover:bg-white transition-all glow-gold-hover w-full sm:w-auto flex-1 text-center"
-            >
+            <Button href={raydiumLink} className="flex-1">
               Buy on Raydium
-            </a>
-            <div className="flex-1 w-full bg-[#111] border border-[#333] rounded-lg p-4 flex flex-col items-center justify-center">
-                <span className="text-xs text-pccCream/50 uppercase tracking-widest mb-1">Contract Address</span>
-                <code className="text-xs sm:text-sm font-mono text-pccCream/80 break-all">{contractAddress}</code>
+            </Button>
+            <div className="flex-1 w-full flex items-center justify-center">
+              <ClipboardCopy textToCopy={contractAddress} label="Contract Address" />
             </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 

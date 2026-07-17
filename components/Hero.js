@@ -1,20 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import { telegramLink, raydiumLink, dexscreenerLink, contractAddress } from "@/constants";
 import { motion } from "framer-motion";
+import Button from "./Button";
+import ClipboardCopy from "./ClipboardCopy";
 
 const Hero = () => {
-  const [copied, setCopied] = useState(false);
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(contractAddress);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
   return (
-    <div className="relative pt-32 pb-24 bg-[#0B0B0B] min-h-[90dvh] flex flex-col justify-center items-center px-6 md:px-12 lg:px-16 overflow-hidden">
+    <header className="relative pt-32 pb-24 bg-[#0B0B0B] min-h-[90dvh] flex flex-col justify-center items-center px-6 md:px-12 lg:px-16 overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pccGold opacity-5 rounded-full blur-[100px] pointer-events-none animate-pulse-glow"></div>
 
@@ -36,7 +31,7 @@ const Hero = () => {
             >
               Stay Calm. Wear the Peci.
             </motion.p>
-            <h1 className="text-h1 text-pccCream font-bold leading-tight">
+            <h1 className="text-h1 text-pccCream font-bold leading-tight font-serif">
               PeciCatCoin ($PCC) <br className="hidden lg:block" />
               <span className="text-gradient-gold">Building Culture, Not Just Hype.</span>
             </h1>
@@ -47,33 +42,16 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-4 pt-4 w-full sm:w-auto">
-            <a
-              href={raydiumLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-pccGold text-[#0B0B0B] font-bold uppercase tracking-wider rounded-lg hover:bg-white transition-all glow-gold-hover w-full sm:w-auto text-center"
-            >
+            <Button href={raydiumLink} className="w-full sm:w-auto">
               Buy on Raydium
-            </a>
-            <a
-              href={dexscreenerLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-transparent border border-pccGold/50 text-pccGold font-bold uppercase tracking-wider rounded-lg hover:bg-pccGold/10 transition-all w-full sm:w-auto text-center"
-            >
+            </Button>
+            <Button href={dexscreenerLink} variant="outline" className="w-full sm:w-auto">
               View Chart
-            </a>
+            </Button>
           </div>
 
-          <div className="mt-4 flex items-center justify-center lg:justify-start gap-2 bg-[#111] border border-[#333] rounded-lg p-2 max-w-md w-full">
-            <span className="text-xs text-pccCream/50 uppercase tracking-widest pl-2">CA:</span>
-            <code className="text-sm font-mono text-pccCream/80 truncate flex-1">{contractAddress}</code>
-            <button
-              onClick={handleCopy}
-              className="bg-[#222] hover:bg-[#333] text-pccCream/70 hover:text-pccGold px-4 py-2 rounded text-sm transition-colors"
-            >
-              {copied ? "Copied" : "Copy"}
-            </button>
+          <div className="mt-4 flex items-center justify-center lg:justify-start w-full">
+            <ClipboardCopy textToCopy={contractAddress} />
           </div>
         </motion.div>
 
@@ -97,7 +75,7 @@ const Hero = () => {
           </div>
         </motion.div>
       </div>
-    </div>
+    </header>
   );
 };
 

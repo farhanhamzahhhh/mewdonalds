@@ -14,9 +14,11 @@ module.exports = {
         pccCream: "#F5F1E7",
         pccBlack: "#0B0B0B",
         pccGold: "#D4AF37",
+        pccEspresso: "#0F0C09",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-playfair)", "serif"],
       },
     },
   },
