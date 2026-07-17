@@ -44,7 +44,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth scroll-pt-24 ${inter.variable} ${playfair.variable}`}>
-      <body className="font-sans antialiased bg-[#0F0C09] text-white selection:bg-pccGold selection:text-[#0B0B0B] relative">
+      <body className="font-sans antialiased bg-[#0F0C09] text-white selection:bg-pccGold selection:text-[#0B0B0B] relative overflow-x-hidden w-full max-w-[100vw]">
         <div className="fixed inset-0 pointer-events-none opacity-[0.03] mix-blend-overlay z-50 bg-[url('/noise.svg')]"></div>
         {children}
       </body>
