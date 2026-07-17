@@ -49,7 +49,7 @@ const Nav = () => {
             : "h-24 bg-transparent"
         }`}
       >
-        <div className="flex items-center justify-between px-6 lg:px-12 mx-auto max-w-screen-2xl h-full">
+        <div className="flex items-center justify-between px-4 md:px-6 lg:px-12 mx-auto max-w-screen-2xl h-full">
           {/* Logo */}
           <div className="flex shrink-0">
             <a href="#" className="flex items-center gap-3">
@@ -113,7 +113,7 @@ const Nav = () => {
             </div>
 
             <button
-              className="lg:hidden p-2 text-pccCream/80 hover:text-pccGold transition-colors"
+              className="lg:hidden p-2 -mr-2 text-pccCream/80 hover:text-pccGold transition-colors"
               onClick={() => setIsMobileMenuOpen(true)}
             >
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
