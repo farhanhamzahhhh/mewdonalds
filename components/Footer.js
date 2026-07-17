@@ -12,13 +12,13 @@ const Footer = () => {
             <div className="flex items-center gap-4 mb-6">
               <div className="relative w-12 h-12 rounded-full overflow-hidden border border-pccGold/30 glow-gold">
                 <Image
-                  src="/si-c.jpg"
+                  src="/si-c.jpeg"
                   fill
                   className="object-cover"
                   alt="PeciCatCoin Mascot Si C"
                 />
               </div>
-              <span className="font-sans font-bold text-pccCream text-2xl tracking-wide">
+              <span className="font-serif font-bold text-pccCream text-2xl tracking-wide">
                 PeciCatCoin
               </span>
             </div>
