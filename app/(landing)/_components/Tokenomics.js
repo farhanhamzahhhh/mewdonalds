@@ -99,12 +99,12 @@ const Tokenomics = () => {
           <h3 className="text-2xl font-bold text-pccCream mb-8 text-center border-b border-[#222] pb-6">Distribution</h3>
 
           <div className="space-y-6">
-            {/* 75% LP */}
+            {/* 85% LP */}
             <div className="flex items-center gap-4">
-              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">75%</div>
+              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">85%</div>
               <div className="flex-1">
                 <div className="h-4 bg-[#222] rounded-full overflow-hidden">
-                  <div className="h-full bg-pccGold rounded-full" style={{ width: "75%" }}></div>
+                  <div className="h-full bg-pccGold rounded-full" style={{ width: "85%" }}></div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-pccCream font-medium">Liquidity Pool</span>
@@ -113,38 +113,12 @@ const Tokenomics = () => {
               </div>
             </div>
 
-            {/* 10% Sanctuary */}
+            {/* 6% Marketing */}
             <div className="flex items-center gap-4">
-              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">10%</div>
+              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">6%</div>
               <div className="flex-1">
                 <div className="h-4 bg-[#222] rounded-full overflow-hidden">
-                  <div className="h-full bg-pccGold rounded-full" style={{ width: "10%" }}></div>
-                </div>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-pccCream font-medium">The Sanctuary Fund</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 8% CEX */}
-            <div className="flex items-center gap-4">
-              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">8%</div>
-              <div className="flex-1">
-                <div className="h-4 bg-[#222] rounded-full overflow-hidden">
-                  <div className="h-full bg-pccGold rounded-full" style={{ width: "8%" }}></div>
-                </div>
-                <div className="flex justify-between items-center mt-2">
-                  <span className="text-pccCream font-medium">CEX & Exchange Listings</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 4% Marketing */}
-            <div className="flex items-center gap-4">
-              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">4%</div>
-              <div className="flex-1">
-                <div className="h-4 bg-[#222] rounded-full overflow-hidden">
-                  <div className="h-full bg-pccGold rounded-full" style={{ width: "4%" }}></div>
+                  <div className="h-full bg-pccGold rounded-full" style={{ width: "6%" }}></div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-pccCream font-medium">Marketing & Community</span>
@@ -152,12 +126,38 @@ const Tokenomics = () => {
               </div>
             </div>
 
-            {/* 3% Team */}
+            {/* 5% CEX */}
             <div className="flex items-center gap-4">
-              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">3%</div>
+              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">5%</div>
               <div className="flex-1">
                 <div className="h-4 bg-[#222] rounded-full overflow-hidden">
-                  <div className="h-full bg-pccGold rounded-full" style={{ width: "3%" }}></div>
+                  <div className="h-full bg-pccGold rounded-full" style={{ width: "5%" }}></div>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="text-pccCream font-medium">CEX & Exchange Listings</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 2% Sanctuary */}
+            <div className="flex items-center gap-4">
+              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">2%</div>
+              <div className="flex-1">
+                <div className="h-4 bg-[#222] rounded-full overflow-hidden">
+                  <div className="h-full bg-pccGold rounded-full" style={{ width: "2%" }}></div>
+                </div>
+                <div className="flex justify-between items-center mt-2">
+                  <span className="text-pccCream font-medium">The Sanctuary Fund</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 2% Team */}
+            <div className="flex items-center gap-4">
+              <div className="w-16 md:w-20 font-bold text-2xl text-pccGold text-right">2%</div>
+              <div className="flex-1">
+                <div className="h-4 bg-[#222] rounded-full overflow-hidden">
+                  <div className="h-full bg-pccGold rounded-full" style={{ width: "2%" }}></div>
                 </div>
                 <div className="flex justify-between items-center mt-2">
                   <span className="text-pccCream font-medium">Team & Ecosystem</span>
