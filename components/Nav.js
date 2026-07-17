@@ -61,7 +61,7 @@ const Nav = () => {
                   alt="PeciCatCoin ($PCC) Mascot"
                 />
               </div>
-              <span className="font-serif font-bold text-pccCream text-2xl tracking-wide hidden sm:block">
+              <span className="font-serif font-bold text-pccCream text-2xl tracking-wide hidden xl:block">
                 PeciCatCoin
               </span>
             </a>
