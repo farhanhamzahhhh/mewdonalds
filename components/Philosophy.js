@@ -25,7 +25,7 @@ const Philosophy = () => {
             The crypto landscape is saturated with noise. They talk. They hype. They beg. But the $HBAO panda just sits back, stares stoically, and polishes his gold. <strong className="text-hbaoCream font-medium">We aren&apos;t here to play games; we are here to build a wealth dynasty.</strong>
           </p>
           <p className="text-body text-hbaoCream/70 mt-4 leading-relaxed">
-            We are establishing the "Hodl Bao" identity—serious, confident, and wealth-oriented. When you see the face, you know the status. This is the gold standard of meme coins.
+            We are establishing the &quot;Hodl Bao&quot; identity—serious, confident, and wealth-oriented. When you see the face, you know the status. This is the gold standard of meme coins.
           </p>
           <p className="text-body text-hbaoGold mt-6 font-medium italic">
             Show them who&apos;s wearing the chain.
