@@ -16,17 +16,17 @@ const HowToBuy = () => {
     {
       number: "02",
       title: "Get Some SOL",
-      description: "You need SOL to buy $PCC. Buy SOL directly within your wallet, or transfer some from an exchange like Binance, Coinbase, or Kraken.",
+      description: "You need SOL to buy $HBAO. Buy SOL directly within your wallet, or transfer some from an exchange like Binance, Coinbase, or Kraken.",
     },
     {
       number: "03",
       title: "Go to Raydium",
-      description: "Connect your wallet to Raydium or Jupiter. Paste the $PCC Contract Address (CA) into the token search bar to find it.",
+      description: "Connect your wallet to Raydium or Jupiter. Paste the $HBAO Contract Address (CA) into the token search bar to find it.",
     },
     {
       number: "04",
-      title: "Swap for $PCC",
-      description: "Enter the amount of SOL you want to swap for $PCC. Click swap, sign the transaction in your wallet, and you're officially a Regular.",
+      title: "Swap for $HBAO",
+      description: "Enter the amount of SOL you want to swap for $HBAO. Click swap, sign the transaction in your wallet, and you're officially part of the dynasty.",
     }
   ];
 
@@ -40,15 +40,15 @@ const HowToBuy = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-h2 text-pccCream font-bold mb-4 font-serif">
-            How to Buy <span className="text-pccGold">$PCC</span>
+          <h2 className="text-h2 text-hbaoCream font-bold mb-4 font-serif">
+            How to Buy <span className="text-hbaoGold">$HBAO</span>
           </h2>
-          <p className="text-body-lg text-pccCream/70 font-light">
+          <p className="text-body-lg text-hbaoCream/70 font-light">
             A simple guide for joining the legion.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-16">
           {steps.map((step, index) => (
             <motion.div 
               key={index} 
@@ -62,8 +62,8 @@ const HowToBuy = () => {
                 {step.number}
               </div>
               <div className="relative z-10">
-                <h3 className="text-2xl font-bold text-pccGold mb-4">{step.title}</h3>
-                <p className="text-pccCream/70 leading-relaxed text-sm">
+                <h3 className="text-2xl font-bold text-hbaoGold mb-4">{step.title}</h3>
+                <p className="text-hbaoCream/70 leading-relaxed text-sm">
                   {step.description}
                 </p>
               </div>
@@ -78,7 +78,7 @@ const HowToBuy = () => {
           transition={{ duration: 0.8 }}
           className="flex flex-col items-center justify-center max-w-3xl mx-auto text-center p-8 lg:p-12 glass-panel rounded-3xl border border-[#222]"
         >
-          <h3 className="text-xl text-pccCream font-semibold mb-6">Ready to become a Regular?</h3>
+          <h3 className="text-xl text-hbaoCream font-semibold mb-6">Ready to build the dynasty?</h3>
           <div className="w-full flex flex-col sm:flex-row items-center gap-4">
             <Button href={raydiumLink} className="flex-1">
               Buy on Raydium

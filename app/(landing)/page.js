@@ -11,15 +11,15 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="bg-[#0B0B0B] text-white font-sans selection:bg-pccGold selection:text-[#0B0B0B]">
+    <div className="bg-[#0B0B0B] text-white font-sans selection:bg-hbaoGold selection:text-[#0B0B0B]">
       <Header>
         <Nav />
       </Header>
       <main>
         <Hero />
-        <Marquee text="$PCC ✦ STAY CALM ✦ WEAR THE PECI ✦ THE REGULARS" />
+        <Marquee text="$HBAO ✦ THE VAULT ✦ THE BLING ✦ THE EMPIRE" />
         <Philosophy />
-        <Marquee text="$PCC ✦ ZERO TAX ✦ BURNED LP ✦ REVOKED" />
+        <Marquee text="$HBAO ✦ ZERO TAX ✦ BURNED LP ✦ RENOUNCED" />
         <Tokenomics />
         <HowToBuy />
         <Mission />

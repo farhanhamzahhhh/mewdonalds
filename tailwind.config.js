@@ -10,11 +10,11 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        pccBrown: "#4A3525",
-        pccCream: "#F5F1E7",
-        pccBlack: "#0B0B0B",
-        pccGold: "#D4AF37",
-        pccEspresso: "#0F0C09",
+        hbaoBrown: "#4A3525",
+        hbaoCream: "#F5F1E7",
+        hbaoBlack: "#0B0B0B",
+        hbaoGold: "#D4AF37",
+        hbaoEspresso: "#0F0C09",
       },
       fontFamily: {
         sans: ["var(--font-inter)", "sans-serif"],

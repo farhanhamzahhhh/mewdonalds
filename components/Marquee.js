@@ -5,7 +5,7 @@ const Marquee = ({ text }) => {
   const items = Array(10).fill(text);
 
   return (
-    <div className="w-full overflow-hidden bg-pccGold py-3 flex border-y border-pccGold/50">
+    <div className="w-full overflow-hidden bg-hbaoGold py-3 flex border-y border-hbaoGold/50">
       <div className="flex animate-marquee whitespace-nowrap">
         {items.map((item, index) => (
           <span key={index} className="text-[#0B0B0B] font-bold text-sm sm:text-base uppercase tracking-widest mx-4 flex items-center">

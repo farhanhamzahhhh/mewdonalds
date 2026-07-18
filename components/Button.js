@@ -22,8 +22,8 @@ const Button = ({ href, children, variant = 'primary', className = '' }) => {
   const baseClasses = "px-8 py-4 font-bold uppercase tracking-wider rounded-lg transition-all text-center inline-block";
   
   const variants = {
-    primary: "bg-pccGold text-[#0B0B0B] hover:bg-white glow-gold-hover",
-    outline: "bg-transparent border border-pccGold/50 text-pccGold hover:bg-pccGold/10",
+    primary: "bg-hbaoGold text-[#0B0B0B] hover:bg-white glow-gold-hover",
+    outline: "bg-transparent border border-hbaoGold/50 text-hbaoGold hover:bg-hbaoGold/10",
   };
   
   const classes = `${baseClasses} ${variants[variant]} ${className}`;

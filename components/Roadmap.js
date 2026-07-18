@@ -3,43 +3,45 @@ import React from "react";
 const Roadmap = () => {
   const phases = [
     {
-      title: "Phase 1 — Foundation",
+      title: "Phase 1 — The Establishment",
       items: [
-        "Launch on Solana (Raydium)",
-        "Fair Launch",
-        "DAO Governance Activation",
+        "Fair launch on a high-volume chain",
+        "Locked Liquidity (Day-1)",
+        "Brand Authority Establishment",
+        "Community Governance (DAO)",
       ],
     },
     {
-      title: "Phase 2 — Community Impact",
+      title: "Phase 2 — The Accumulation & Legacy",
       items: [
-        "Launch The Sanctuary Fund",
-        "Partnerships with Animal Shelters",
-        "First Community Donation Campaign",
+        "Aggressive Marketing Push",
+        "The Sanctuary Fund (Genesis)",
+        "Tier-2 Exchange Listings",
+        "Holder Vault Access",
       ],
     },
     {
-      title: "Phase 3 — Ecosystem Expansion",
+      title: "Phase 3 — The Gold Standard",
       items: [
-        "Launch PeciCares Merchandise",
-        "Proof of Contribution Integration",
-        "Community Reward Programs",
+        "Advanced DeFi Integrations",
+        "Strategic Partnerships",
+        "Global Outreach",
       ],
     },
     {
-      title: "Phase 4 — Financial Growth",
+      title: "Phase 4 — Tier-1 Dominance",
       items: [
-        "DeFi Integration",
-        "Tier-1 CEX Expansion",
-        "Cross-Chain Compatibility",
+        "Tier-1 CEX Listings",
+        "Cross-Chain Expansion",
+        "The $HBAO Dynasty",
       ],
     },
     {
-      title: "Phase 5 — Global Vision",
+      title: "Phase 5 — Global Impact",
       items: [
-        "Establish the Global Peci Facility",
-        "Global Ambassador Program",
-        "Worldwide Community Expansion",
+        "The Global HBAO Sanctuary",
+        "Ambassador Program",
+        "Sustainable Treasury",
       ],
     },
   ];
@@ -48,24 +50,24 @@ const Roadmap = () => {
     <section id="roadmap" className="py-24 bg-[#0B0B0B] border-t border-[#222]">
       <div className="max-w-[85rem] px-6 md:px-12 xl:px-16 mx-auto">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <h2 className="text-h2 text-pccCream font-bold mb-4 font-serif">
-            Roadmap
+          <h2 className="text-h2 text-hbaoCream font-bold mb-4 font-serif">
+            $HBAO Strategic Roadmap
           </h2>
-          <p className="text-body-lg text-pccCream/70 font-light">
-            Strategic Vision
+          <p className="text-body-lg text-hbaoCream/70 font-light">
+            The Vault, The Bling, & The Empire
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {phases.map((phase, index) => (
             <div key={index} className="glass-panel p-8 rounded-2xl border border-[#222] relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-full h-1 bg-pccGold opacity-50 group-hover:opacity-100 transition-opacity"></div>
-              <h3 className="text-xl font-bold text-pccGold mb-6">{phase.title}</h3>
+              <div className="absolute top-0 left-0 w-full h-1 bg-hbaoGold opacity-50 group-hover:opacity-100 transition-opacity"></div>
+              <h3 className="text-xl font-bold text-hbaoGold mb-6">{phase.title}</h3>
               <ul className="space-y-4">
                 {phase.items.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <span className="text-pccGold mt-1">✓</span>
-                    <span className="text-pccCream/80">{item}</span>
+                    <span className="text-hbaoGold mt-1">✓</span>
+                    <span className="text-hbaoCream/80">{item}</span>
                   </li>
                 ))}
               </ul>
