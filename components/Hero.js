@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { telegramLink, raydiumLink, dexscreenerLink, contractAddress } from "@/constants";
+import { telegramLink, pumpfunLink, contractAddress } from "@/constants";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import ClipboardCopy from "./ClipboardCopy";
@@ -42,11 +42,8 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 pt-4 w-full sm:w-auto">
-            <Button href={raydiumLink} className="w-full sm:w-auto">
-              Buy on Raydium
-            </Button>
-            <Button href={dexscreenerLink} variant="outline" className="w-full sm:w-auto">
-              View Chart
+            <Button href={pumpfunLink} className="w-full sm:w-auto">
+              Buy on Pump Fun
             </Button>
           </div>
 

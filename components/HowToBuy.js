@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { raydiumLink, contractAddress } from "@/constants";
+import { pumpfunLink, contractAddress } from "@/constants";
 import { motion } from "framer-motion";
 import Button from "./Button";
 import ClipboardCopy from "./ClipboardCopy";
@@ -20,8 +20,8 @@ const HowToBuy = () => {
     },
     {
       number: "03",
-      title: "Go to Raydium",
-      description: "Connect your wallet to Raydium or Jupiter. Paste the $HBAO Contract Address (CA) into the token search bar to find it.",
+      title: "Go to Pump Fun",
+      description: "Connect your wallet to Pump Fun. Paste the $HBAO Contract Address (CA) into the token search bar to find it.",
     },
     {
       number: "04",
@@ -80,8 +80,8 @@ const HowToBuy = () => {
         >
           <h3 className="text-xl text-hbaoCream font-semibold mb-6">Ready to build the dynasty?</h3>
           <div className="w-full flex flex-col sm:flex-row items-center gap-4">
-            <Button href={raydiumLink} className="flex-1">
-              Buy on Raydium
+            <Button href={pumpfunLink} className="flex-1">
+              Buy on Pump Fun
             </Button>
             <div className="flex-1 w-full flex items-center justify-center">
               <ClipboardCopy textToCopy={contractAddress} label="Contract Address" />

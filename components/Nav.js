@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { twitterLink, telegramLink, contractAddress, dexscreenerLink } from "@/constants";
+import { twitterLink, telegramLink, contractAddress, pumpfunLink } from "@/constants";
 import { Telegram, X } from "@/components/icons";
 
 const navigation = [
@@ -91,12 +91,12 @@ const Nav = () => {
               </svg>
             </button>
             <a
-              href={dexscreenerLink}
+              href={pumpfunLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-xs font-bold uppercase tracking-widest bg-hbaoGold/10 text-hbaoGold border border-hbaoGold/30 px-4 py-1.5 rounded hover:bg-hbaoGold hover:text-[#0B0B0B] transition-colors"
             >
-              Chart
+              Buy on Pump Fun
             </a>
           </div>
 
@@ -167,12 +167,12 @@ const Nav = () => {
               <span>{copied ? "Address Copied!" : "Copy CA"}</span>
             </button>
             <a
-              href={dexscreenerLink}
+              href={pumpfunLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-center text-sm font-bold uppercase tracking-widest bg-hbaoGold text-[#0B0B0B] px-4 py-3 rounded w-full"
             >
-              View Chart
+              Buy on Pump Fun
             </a>
           </div>
 
