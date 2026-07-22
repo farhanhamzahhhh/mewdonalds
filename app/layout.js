@@ -30,7 +30,7 @@ export const metadata = {
     title: "Hodl Bao ($HBAO) - The Vault, The Bling, & The Empire",
     description: "The $HBAO panda just sits back, stares stoically, and polishes his gold.",
     images: ["/hbao-boss.jpeg"],
-    creator: "@hodlbao",
+    creator: "@HodlBaoCoin",
   },
   robots: {
     index: true,
